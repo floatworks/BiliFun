@@ -1,54 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
+<{include file="header.html"}>
 <title>梦想 +∞</title>
-<link rel="stylesheet" href="../assets/css/something.css">
-<link rel="stylesheet" href="../assets/css/base.css">
-
-<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/something.js"></script>
-<script type='text/javascript' src='../assets/js/jquery.particleground.min.js'></script>
-<script type="text/javascript" src="../assets/js/lightchange.js"></script>
-<script type="text/javascript" src="../assets/js/slider.min.js"></script>
-<script type="text/javascript" src="../assets/js/scrollspy.js"></script>
 </head>
 
 <body>
   <div id="particleground"></div>
   <header id="my-header">
-    <!-- fixed nav -->
-    <nav id="my-nav" class="navbar navbar-fixed-top" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <span id="my-title" class="navbar-brand">梦想 +∞</span>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" placeholder="夢" id="form-bg" class="form-control" />
-            </div>
-            <button type="submit" class="btn">寻 夢</button>
-          </form>
-          <!--  -->
-          <ul class="nav navbar-nav navbar-right">
-            <li><a id="my-nav1" href="#"> 登录</a></li>
-            <li><a id="my-nav2" href="#"> 投稿</a></li>
-            <li><a id="my-nav3" href="#"> 收藏</a></li>
-          </ul>
-          <div class="my-navbar">
-            <ul class="nav navbar-nav navbar-right nav-pills">
-              <li class="active"><a id="to-Top" href="#Top">顶部</a></li>
-              <li><a id="to-Video" href="#Video">视频</a></li>
-            </ul>
-          </div>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-
-
+    <{include file="navbar.html"}>
     <!-- swap -->
     <div id="Top" class="container my-swap">
       <ul>
@@ -63,17 +20,17 @@
         </li>
         <li>
           <div id="my-swap3" class="text-center">
-            <img src="../assets/img/c.png" alt="">
+            <img src="<{$__RESOURCE}>/img/c.png" alt="">
           </div>
         </li>
         <li>
           <div id="my-swap2">
             <div class="text-center col-md-6">
-              <a href="#"><img id="id-Irvin" src="../assets/img/a.png" alt="" class="img-circle"></a>
+              <a href="#"><img id="id-Irvin" src="<{$__RESOURCE}>/img/a.png" alt="" class="img-circle"></a>
               <p><a href="#">@Irvin</a></p>
             </div>
             <div class="text-center col-md-6">
-              <a href="#"><img id="id-Demone" src="../assets/img/b.png" alt="" class="img-circle"></a>
+              <a href="#"><img id="id-Demone" src="<{$__RESOURCE}>/img/b.png" alt="" class="img-circle"></a>
               <p><a href="#">@Demone</a></p>
             </div>
           </div>
@@ -104,16 +61,16 @@
       <div class="row row-1">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
           
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -121,15 +78,15 @@
       <div class="row row-2">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -137,15 +94,15 @@
       <div class="row row-3">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -160,15 +117,15 @@
       <div class="row row-1">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -176,15 +133,15 @@
       <div class="row row-2">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -192,15 +149,15 @@
       <div class="row row-3">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -215,15 +172,15 @@
       <div class="row row-1">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -231,15 +188,15 @@
       <div class="row row-2">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -247,15 +204,15 @@
       <div class="row row-3">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -270,15 +227,15 @@
       <div class="row row-1">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -286,15 +243,15 @@
       <div class="row row-2">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -302,15 +259,15 @@
       <div class="row row-3">
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
         <div class="col-xs-6 col-md-6">
           <a href="#" class="thumbnail">
-            <img src="../assets/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="../assets/img/icon/play.png" alt="">
+            <img src="<{$__RESOURCE}>/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
+            <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="">
             <span>...</span>
           </a>
         </div>
@@ -318,20 +275,7 @@
     </div>
   </section>
   
-  <!-- footer -->
-  <footer>
-    <div id="my-footer">
-      <ul class="list-inline text-center ">
-        <li>当前版本: v2.0.0</li>
-        <li>|</li>
-        <li><a href="#">关于</a></li>
-        <li>|</li>
-        <li><a href="#">联系我们</a></li>
-        <li>|</li>
-        <li><a href="#">侵权申诉</a></li>
-      </ul>
-    </div>
-  </footer>
+  <{include file="footer.html"}>
 
 <script>
 $('.my-swap').slider({

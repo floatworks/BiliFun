@@ -10,7 +10,9 @@ header("Content-type:text/html;charset=utf-8;");
 
 define("APP_PATH",dirname(__FILE__));
 define("SP_PATH",dirname(__FILE__).'/common/SpeedPHP');
+// $spConfig = array(
 
+// );
 require('/actions/config.php');
 require('/actions/linkdb.php');
 require('/common/include/tools.php');

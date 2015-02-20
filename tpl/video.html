@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>。。。</title>
+<link rel="stylesheet" href="../assets/css/video.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+
+<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/video.js"></script>
+<script type='text/javascript' src='../assets/js/jquery.particleground.min.js'></script>
+<script type="text/javascript" src="../assets/js/jquery.scrollto.js"></script>
+<script type="text/javascript" src="../assets/js/lightchange.js"></script>
+</head>
+
+<body>
+	<header id="my-header">
+		<!-- fixed nav -->
+		<nav id="my-nav" class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <span id="my-title" class="navbar-brand">梦想 +∞</span>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" placeholder="夢" id="form-bg" class="form-control" />
+            </div>
+            <button type="submit" class="btn">寻 夢</button>
+          </form>
+          <!--  -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="my-nav1" href="#"> 登录</a></li>
+            <li><a id="my-nav2" href="#"> 投稿</a></li>
+            <li><a id="my-nav3" href="#"> 收藏</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+	</header>
+
+	<!-- main -->
+	<div class="container my-content">
+
+		<!-- 视频信息 -->
+		<div class="row">
+			<div class="col-md-10">
+				<p class="lead">Title</p>
+				<span class="person-name">name</span><span>发布于</span><span class="time"></span>
+			</div>
+			<div class="col-md-2">
+				<a href="#">收藏</a>
+				<a href="#">评论</a>
+			</div>
+		</div>
+
+		<!-- 播放器 -->
+		<div class="video">
+			<video src="../public/video/【kwaimay】你所停驻的季节.mp4" class="my-video" controls="controls">
+				您的浏览器不支持 video 标签。
+			</video>
+			<!-- 弹幕 -->
+			<div class="barrage">
+				<marquee behavior="slide" direction="left">233333333333</marquee>
+				<marquee behavior="slide" direction="left">hhhhhhhhhhhh</marquee>
+			</div>
+			<input type="text" class="my-input" placeholder="此处填装弹幕">
+			<button type="submit" class="btn shoot">发射！</button>
+		</div>
+
+		<!-- 标签 -->
+		<div class="video-tag">
+			<p><span> 标签：</span><a href="#"> hhhh </a></p>
+			<hr>
+			<p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+		</div>
+
+		<hr>
+
+		<!-- 评论区 -->
+		<div>
+			<p>说两句呗~o(*￣▽￣*)ブ</p>
+			<form class="say-form">
+				<textarea class="form-control" rows="4" name="message"></textarea>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<h6>评论区</h6>
+			<hr>
+			<div class="panel panel-default">
+		  	<div class="panel-body">
+		   	<h6>
+		    	<a href="">月落丶音阑</a>
+		    </h6>
+		    <p>沙发~~~~~~</p>
+		    <span class = "time">...</span>
+		  	</div>
+			</div>
+	</div>
+	
+	<!-- footer -->
+	<div id="my-footer">
+    <ul class="list-inline text-center">
+  	  <li>当前版本: v2.0.0</li>
+  	  <li>|</li>
+  	  <li><a href="#">关于</a></li>
+  	  <li>|</li>
+  	  <li><a href="#">联系我们</a></li>
+  	  <li>|</li>
+  	  <li><a href="#">侵权申诉</a></li>
+  	</ul>
+  </div>
+
+</body>
+</html>

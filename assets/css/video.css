@@ -1,0 +1,122 @@
+@font-face{
+	font-family: "loveletter";
+	scr:url('../fonts/MFQingShu/MFQingShu_Noncommercial-Regular.otf')format('opentype');
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	font-family: 'loveletter';
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+a:hover {
+	color: #333;
+}
+
+/* header */
+#particleground{
+	// background: url(../img/bg/c4.png);
+	background-size: cover;
+  width: 100%;
+	height: 770px;
+}
+#my-header{
+  width: 100%;
+  height: 770px;
+	margin-top: -770px;
+}
+#my-nav{
+	background: #8C657C;
+}
+.my-navbar{
+	margin-right: 400px;
+}
+#to-Top, #to-Video{
+	color: #eee;
+}
+#form-bg{
+	// background: #343986;
+}
+.form-control, .select2-search {
+  border: 2px solid #b186b3 !important;
+}
+.navbar-form .btn:hover {
+    background: #3e1934;
+}
+.form-group.focus .form-control, .form-control:focus, .form-group.focus .select2-search input[type=text], .select2-search input[type=text]:focus {
+    border-color: #3e1934 !important;
+}
+#my-logo,#my-title{
+	color: #eee;
+}
+#my-nav1,#my-nav2,#my-nav3{
+	color: #eee;
+}
+#my-nav1:hover,#my-nav2:hover,#my-nav3:hover{
+	background: #3e1934;
+}
+#Top{
+	margin-top: 100px;
+}
+
+
+/* main */
+.my-content{
+	margin-top: 100px;
+}
+
+/* 播放 */
+.my-video{
+	width: 80%;
+	margin-top: 50px;
+	margin-left: 10%;
+	border: #888 1px solid;
+	border-radius: 10px;
+}
+.video-tag{
+	margin-top: 5px;
+	background: #fff;
+	border: #999 1px solid;
+	border-radius: 5px;
+}
+.my-input{
+	border: #444 1px solid;
+	margin-left: 10%;
+	width: 72.5%;
+	border-radius: 5px;
+}
+.shoot{
+	background: #999;
+}
+.shoot:hover{
+	background: #777;
+}
+
+/* 弹幕 */
+.barrage{
+	width: 80%;
+	position: absolute;
+	margin-top: -530px;
+	margin-left: 10%;
+	z-index: 100000;
+}
+
+
+
+/* 评论 */
+.say-form .btn{
+	float: right;
+}
+
+/*footer*/
+#my-footer{	
+	margin-top: 100px;
+	padding-bottom: 50px;
+	color: #000;
+	background: none;
+}
+#my-footer a{
+	color: #000;
+}

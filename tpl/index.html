@@ -9,7 +9,8 @@
     <!-- swap -->
     <div id="Top" class="container my-swap">
       <ul>
-        <{foreach from=$swap item=bfa}>
+        <{foreach from=$swap item=bfa name=foo}> <{$i = $swap|@count}>
+        <{if $smarty.foreach.foo.iteration < $i}>
         <li>
           <div id="my-swap<{$bfa.id}>" class="text-center">
         <{if $bfa.status == 0}>
@@ -20,18 +21,19 @@
         <{elseif $bfa.status == 1}>
           <img src="<{$__RESOURCE}>/<{$bfa.thumb}>" alt="<{$bfa.description}>">
         <{else}>
+          <{section name=ator loop=$swap}><{if $swap[ator].status == 2}>
           <div class="col-md-6">
-            <a href="<{$bfa.url}>"><img src="<{$__RESOURCE}>/<{$bfa.thumb}>" alt="<{$bfa.info}>" class="img-circle"></a>
-            <p><a href="<{$bfa.url}>"><{$bfa.info}></a></p>
-          </div>
+            <a href="<{$swap[ator].url}>"><img src="<{$__RESOURCE}>/<{$swap[ator].thumb}>" alt="<{$swap[ator].info}>" class="img-circle"></a>
+            <p><a href="<{$swap[ator].url}>"><{$swap[ator].info}></a></p>
+          </div> <{$i = $i - 1}>
+          <{/if}><{/section}>
         <{/if}>
           </div>
         </li>
+        <{/if}>
         <{/foreach}>
       </ul>
     </div>
-    
-
   </header>
   
 

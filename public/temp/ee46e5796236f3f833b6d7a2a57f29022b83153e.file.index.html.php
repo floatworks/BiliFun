@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 11:58:35
+<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 15:57:40
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:85242373754e8026bf05cd7-89289232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:90739657354e83a74e96d36-09003371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee46e5796236f3f833b6d7a2a57f29022b83153e' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/index.html',
-      1 => 1424491114,
+      1 => 1424505456,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '85242373754e8026bf05cd7-89289232',
+  'nocache_hash' => '90739657354e83a74e96d36-09003371',
   'function' => 
   array (
   ),
@@ -33,9 +33,12 @@ $_smarty_tpl->decodeProperties(array (
       <ul>
         <?php  $_smarty_tpl->tpl_vars['bfa'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('swap')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['foo']['iteration']=0;
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['bfa']->key => $_smarty_tpl->tpl_vars['bfa']->value){
-?>
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['foo']['iteration']++;
+?> <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_variable(count($_smarty_tpl->getVariable('swap')->value), null, null);?>
+        <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['foo']['iteration']<$_smarty_tpl->getVariable('i')->value){?>
         <li>
           <div id="my-swap<?php echo $_smarty_tpl->tpl_vars['bfa']->value['id'];?>
 " class="text-center">
@@ -52,24 +55,48 @@ if ($_smarty_tpl->_count($_from) > 0){
 " alt="<?php echo $_smarty_tpl->tpl_vars['bfa']->value['description'];?>
 ">
         <?php }else{ ?>
+          <?php unset($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['name'] = 'ator';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['loop'] = is_array($_loop=$_smarty_tpl->getVariable('swap')->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['show']):
+
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['total']);
+?><?php if ($_smarty_tpl->getVariable('swap')->value[$_smarty_tpl->getVariable('smarty')->value['section']['ator']['index']]['status']==2){?>
           <div class="col-md-6">
-            <a href="<?php echo $_smarty_tpl->tpl_vars['bfa']->value['url'];?>
+            <a href="<?php echo $_smarty_tpl->getVariable('swap')->value[$_smarty_tpl->getVariable('smarty')->value['section']['ator']['index']]['url'];?>
 "><img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/<?php echo $_smarty_tpl->tpl_vars['bfa']->value['thumb'];?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['bfa']->value['info'];?>
+/<?php echo $_smarty_tpl->getVariable('swap')->value[$_smarty_tpl->getVariable('smarty')->value['section']['ator']['index']]['thumb'];?>
+" alt="<?php echo $_smarty_tpl->getVariable('swap')->value[$_smarty_tpl->getVariable('smarty')->value['section']['ator']['index']]['info'];?>
 " class="img-circle"></a>
-            <p><a href="<?php echo $_smarty_tpl->tpl_vars['bfa']->value['url'];?>
-"><?php echo $_smarty_tpl->tpl_vars['bfa']->value['info'];?>
+            <p><a href="<?php echo $_smarty_tpl->getVariable('swap')->value[$_smarty_tpl->getVariable('smarty')->value['section']['ator']['index']]['url'];?>
+"><?php echo $_smarty_tpl->getVariable('swap')->value[$_smarty_tpl->getVariable('smarty')->value['section']['ator']['index']]['info'];?>
 </a></p>
-          </div>
+          </div> <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_variable($_smarty_tpl->getVariable('i')->value-1, null, null);?>
+          <?php }?><?php endfor; endif; ?>
         <?php }?>
           </div>
         </li>
+        <?php }?>
         <?php }} ?>
       </ul>
     </div>
-    
-
   </header>
   
 

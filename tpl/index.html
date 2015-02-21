@@ -38,13 +38,14 @@
   
 
   <!-- notice -->
+  <{foreach from=$notice item=bfn}>
   <div id="my-notice">
-    <div id="notice-button" class="text-center">梦の轻语</div>
+    <div id="notice-button" class="text-center"><{$bfn.title}></div>
     <div id="notice-content">
-      <p class="text-center">这里是梦想汇聚的地方，我们的征途是星辰大海</p>
-      <p class="text-center">梦想 +∞</p>
+      <p class="text-center"><{$bfn.content}></p>
     </div>
   </div>
+  <{/foreach}>
 
   <!-- main -->
   <section id="Video"> 

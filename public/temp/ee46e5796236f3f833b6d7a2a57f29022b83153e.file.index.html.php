@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 15:57:40
+<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 16:29:06
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:90739657354e83a74e96d36-09003371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:80087465354e841d208a261-13978167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee46e5796236f3f833b6d7a2a57f29022b83153e' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/index.html',
-      1 => 1424505456,
+      1 => 1424507343,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '90739657354e83a74e96d36-09003371',
+  'nocache_hash' => '80087465354e841d208a261-13978167',
   'function' => 
   array (
   ),
@@ -101,13 +101,20 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['ator']['last']       = ($_sm
   
 
   <!-- notice -->
+  <?php  $_smarty_tpl->tpl_vars['bfn'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('notice')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['bfn']->key => $_smarty_tpl->tpl_vars['bfn']->value){
+?>
   <div id="my-notice">
-    <div id="notice-button" class="text-center">梦の轻语</div>
+    <div id="notice-button" class="text-center"><?php echo $_smarty_tpl->tpl_vars['bfn']->value['title'];?>
+</div>
     <div id="notice-content">
-      <p class="text-center">这里是梦想汇聚的地方，我们的征途是星辰大海</p>
-      <p class="text-center">梦想 +∞</p>
+      <p class="text-center"><?php echo $_smarty_tpl->tpl_vars['bfn']->value['content'];?>
+</p>
     </div>
   </div>
+  <?php }} ?>
 
   <!-- main -->
   <section id="Video"> 

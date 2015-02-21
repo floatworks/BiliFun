@@ -13,9 +13,9 @@ define("SP_PATH",dirname(__FILE__).'/common/SpeedPHP');
 // $spConfig = array(
 
 // );
-require('/actions/config.php');
-require('/actions/linkdb.php');
-require('/common/include/tools.php');
+require(APP_PATH."/actions/config.php");
+require(APP_PATH."/actions/linkdb.php");
+require(APP_PATH."/common/include/tools.php");
 
 require(SP_PATH."/SpeedPHP.php");
 spRun();

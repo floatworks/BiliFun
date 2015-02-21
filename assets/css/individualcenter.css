@@ -37,10 +37,10 @@ a:hover {
 	height: 800px;
 	background: url(../img/bg/c5.jpg);	
 	-webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
 }
 #center-left{
 	width: 30%;

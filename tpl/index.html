@@ -1,5 +1,5 @@
 <{include file="header.html"}>
-<title>梦想 +∞</title>
+<title><{$conf.sitename}></title>
 </head>
 
 <body>
@@ -9,32 +9,25 @@
     <!-- swap -->
     <div id="Top" class="container my-swap">
       <ul>
+        <{foreach from=$swap item=bfa}>
         <li>
-          <div id="my-swap1" class="jumbotron text-center">
-            <h1>梦想 +∞</h1>
-            <p>We walk a thin line between hope and despair【在希望与绝望间我们寻觅一线生机】</p>
-            <p>Running from the truth but it’s already here【一味想逃离真相但它却无处不在】</p>
-            <p>Told so many lies I don’t know if they can find me【诉说了无数谎言 也不知何时会被拆穿】</p>
-            <p>Only one life to live so choose wisely【生命只有一次 我们必须慎行】</p>
+          <div id="my-swap<{$bfa.id}>" class="text-center">
+        <{if $bfa.status == 0}>
+          <div class="jumbotron">
+            <h1><{$bfa.title}></h1>
+            <{$bfa.description}>
+          </div>
+        <{elseif $bfa.status == 1}>
+          <img src="<{$__RESOURCE}>/<{$bfa.thumb}>" alt="<{$bfa.description}>">
+        <{else}>
+          <div class="col-md-6">
+            <a href="<{$bfa.url}>"><img src="<{$__RESOURCE}>/<{$bfa.thumb}>" alt="<{$bfa.info}>" class="img-circle"></a>
+            <p><a href="<{$bfa.url}>"><{$bfa.info}></a></p>
+          </div>
+        <{/if}>
           </div>
         </li>
-        <li>
-          <div id="my-swap3" class="text-center">
-            <img src="<{$__RESOURCE}>/img/c.png" alt="">
-          </div>
-        </li>
-        <li>
-          <div id="my-swap2">
-            <div class="text-center col-md-6">
-              <a href="#"><img id="id-Irvin" src="<{$__RESOURCE}>/img/a.png" alt="" class="img-circle"></a>
-              <p><a href="#">@Irvin</a></p>
-            </div>
-            <div class="text-center col-md-6">
-              <a href="#"><img id="id-Demone" src="<{$__RESOURCE}>/img/b.png" alt="" class="img-circle"></a>
-              <p><a href="#">@Demone</a></p>
-            </div>
-          </div>
-        </li>
+        <{/foreach}>
       </ul>
     </div>
     
@@ -278,17 +271,17 @@
   <{include file="footer.html"}>
 
 <script>
-$('.my-swap').slider({
-  fluid: true,
-  dots: true,
-});
-$('.my-swap').css('width', '100%');
+  $('.my-swap').slider({
+    fluid: true,
+    dots: true,
+  });
+  $('.my-swap').css('width', '100%');
 </script>
 
 <script>
-$('body').scrollspy({
-  target: '.my-navbar'
-});
+  $('body').scrollspy({
+    target: '.my-navbar'
+  });
 </script>
 
 </body>

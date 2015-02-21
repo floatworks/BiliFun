@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 10:40:16
+<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 21:49:21
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/navbar.html" */ ?>
-<?php /*%%SmartyHeaderCode:189303609854e7f010b31c65-67192230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:104041574854e88ce17441d1-22513153%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '86a0a265ebe775c7c2f3ecfed0ca84d895992cba' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/navbar.html',
-      1 => 1424447018,
+      1 => 1424526558,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '189303609854e7f010b31c65-67192230',
+  'nocache_hash' => '104041574854e88ce17441d1-22513153',
   'function' => 
   array (
   ),
@@ -22,7 +22,8 @@ $_smarty_tpl->decodeProperties(array (
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <span id="my-title" class="navbar-brand">梦想 +∞</span>
+          <span id="my-title" class="navbar-brand"><?php echo $_smarty_tpl->getVariable('conf')->value['sitename'];?>
+</span>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
@@ -40,8 +41,16 @@ $_smarty_tpl->decodeProperties(array (
           </ul>
           <div class="my-navbar">
             <ul class="nav navbar-nav navbar-right nav-pills">
-              <li class="active"><a id="to-Top" href="#Top">顶部</a></li>
-              <li><a id="to-Video" href="#Video">视频</a></li>
+            <?php  $_smarty_tpl->tpl_vars['bfc'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('cate')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['bfc']->key => $_smarty_tpl->tpl_vars['bfc']->value){
+?><?php if ($_smarty_tpl->tpl_vars['bfc']->value['stat']>=0){?>
+              <li <?php if ($_smarty_tpl->tpl_vars['bfc']->value['stat']==1){?> class="active" <?php }?>><a id="to-<?php echo $_smarty_tpl->tpl_vars['bfc']->value['name'];?>
+" href="<?php echo $_smarty_tpl->tpl_vars['bfc']->value['url'];?>
+"><?php echo $_smarty_tpl->tpl_vars['bfc']->value['category'];?>
+</a></li>
+            <?php }?><?php }} ?>
             </ul>
           </div>
         </div><!-- /.navbar-collapse -->

@@ -58,7 +58,7 @@ body {
 .my-navbar{
 	margin-right: 400px;
 }
-#to-Top, #to-Video{
+.nav > li > a {
 	color: #eee;
 }
 #form-bg{

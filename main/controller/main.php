@@ -8,7 +8,7 @@ class main extends base {
 		$this->swap = spClass('m_swap')->findAll(null, 'shownum ASC, id DESC');
 		// 公告
 		$this->notice = $notice = spClass('m_notice')->findAll(null, 'id ASC');
-		
-		$this->display('index.html');
+				
+		// $this->display('index.html');
 	}
 }

@@ -5,7 +5,7 @@ class m_swap extends spModel {
 	public $table = 'swap';
 	public $pk = 'id';
 
-	public $verify = array(
+	public $verifier = array(
 		'rules' => array(
 			'status' => array(
 				'notnull' => true,

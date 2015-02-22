@@ -26,4 +26,22 @@ class check extends spController {
 		}
 
 	}
+
+	public function success($message, $url = '') {
+		$this->message = $message;
+		$this->url = $url;
+
+		$this->display('message.tpl.php');
+
+		exit;
+	}
+
+	public function error($message, $url = '') {
+		$this->message = $message;
+		$this->url = $url;
+
+		$this->display('message.tpl.php');
+
+		exit;
+	}
 }

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 16:29:06
+<?php /* Smarty version Smarty-3.0.8, created on 2015-02-22 13:03:22
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:80087465354e841d208a261-13978167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:56167327454e9631a54ed75-57826812%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee46e5796236f3f833b6d7a2a57f29022b83153e' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/index.html',
-      1 => 1424507343,
+      1 => 1424528171,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '80087465354e841d208a261-13978167',
+  'nocache_hash' => '56167327454e9631a54ed75-57826812',
   'function' => 
   array (
   ),
@@ -185,6 +185,7 @@ if ($_smarty_tpl->_count($_from) > 0){
         </div>
       </div>
     </div>
+
 
     <!-- music -->
     <div id="my-music" class="my-list">

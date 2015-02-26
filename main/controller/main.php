@@ -8,6 +8,10 @@ class main extends base {
 		$this->swap = spClass('m_swap')->findAll(null, 'shownum ASC, id DESC');
 		// 公告
 		$this->notice = $notice = spClass('m_notice')->findAll(null, 'id ASC');
+		// 分类菜单 -- cid: 分类ID
+		$this->cate = spClass('m_category')->findAll("stat < '0'", 'cid ASC, id DESC');
+		// 视频推荐列表
+		$this->prod = spClass('m_prod')->findAll(array('visible' => 1), 'views DESC, id DESC');
 				
 		$this->display('index.html');
 	}
@@ -34,7 +38,7 @@ class main extends base {
 			$this->crow = $crow = spClass('m_category')->find(array('id' => $prow['pid']));
 			$this->__PID = $crow['pid'];
 
-			$this->display('video-'.$pid.'.html');
+			$this->display('video.html');
 		} elseif ($pid = intval($this->spArgs('pid'))) {
 			$page = intval($this->spArgs('page')) <= 0 ? 1 : intval($this->spArgs('page'));
 			$this->prodList = spClass('m_prod')->spLinker()->spPager($page, 9)->findAll(array('pid' => $pid, 'visible' => 1, 'views DESC, id DESC'));

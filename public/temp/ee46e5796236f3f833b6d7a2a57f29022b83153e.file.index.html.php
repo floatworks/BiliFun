@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-22 13:03:22
+<?php /* Smarty version Smarty-3.0.8, created on 2015-02-26 13:56:28
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:56167327454e9631a54ed75-57826812%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:26563500454eeb58c1fbe47-87382307%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee46e5796236f3f833b6d7a2a57f29022b83153e' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/index.html',
-      1 => 1424528171,
+      1 => 1424930185,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '56167327454e9631a54ed75-57826812',
+  'nocache_hash' => '26563500454eeb58c1fbe47-87382307',
   'function' => 
   array (
   ),
@@ -117,276 +117,48 @@ if ($_smarty_tpl->_count($_from) > 0){
   <?php }} ?>
 
   <!-- main -->
-  <section id="Video"> 
-    <!-- anime -->
-    <div id="my-anime" class="my-list">
+  <section id="Video">
+  <?php  $_smarty_tpl->tpl_vars['bfv'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('cate')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['video']['iteration']=0;
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['bfv']->key => $_smarty_tpl->tpl_vars['bfv']->value){
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['video']['iteration']++;
+?>
+    <!-- <?php echo $_smarty_tpl->tpl_vars['bfv']->value['name'];?>
+ -->
+    <div id="my-<?php echo $_smarty_tpl->tpl_vars['bfv']->value['name'];?>
+" class="my-list">
       <div class="dark"></div>
     </div>
-    <div id="anime-content" class="my-content">
-      <div class="row row-1">
+    <?php  $_smarty_tpl->tpl_vars['bfp'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('prod')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['bfp']->key => $_smarty_tpl->tpl_vars['bfp']->value){
+?>
+    <?php if ($_smarty_tpl->tpl_vars['bfp']->value['channel']==$_smarty_tpl->tpl_vars['bfv']->value['name']){?>
+    <div id="<?php echo $_smarty_tpl->tpl_vars['bfv']->value['name'];?>
+-content" class="my-content">
+      <div class="row row-<?php echo $_smarty_tpl->getVariable('smarty')->value['foreach']['video']['iteration'];?>
+">
         <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-          
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-2">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-3">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
+        <a href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'main','a'=>'prod','id'=>$_smarty_tpl->tpl_vars['bfp']->value['id']),$_smarty_tpl);?>
+" class="thumbnail">
+          <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['bfp']->value['thumb'];?>
+" data-src="holder.js/100%x180" alt="<?php echo $_smarty_tpl->tpl_vars['bfp']->value['video_name'];?>
+">
+          <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/img/icon/play.png" alt="playing">
+          <span><?php echo $_smarty_tpl->tpl_vars['bfp']->value['video_name'];?>
+</span>
+        </a>
         </div>
       </div>
     </div>
-
-
-    <!-- music -->
-    <div id="my-music" class="my-list">
-      <div class="dark"></div>
-    </div>
-    <div id="music-content" class="my-content">
-      <div class="row row-1">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-2">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-3">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- entertainment -->
-    <div id="my-entertainment" class="my-list">
-      <div class="dark"></div>
-    </div>
-    <div id="entertainment-content" class="my-content">
-      <div class="row row-1">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-2">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-3">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- technology -->
-    <div id="my-technology" class="my-list">
-      <div class="dark"></div>
-    </div>
-    <div id="technology-content" class="my-content">
-      <div class="row row-1">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img1.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img2.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-2">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img3.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img4.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-      <div class="row row-3">
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img5.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-6">
-          <a href="#" class="thumbnail">
-            <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/anime/img6.png" data-src="holder.js/100%x180" alt="...">
-            <img class="pic-hover" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/img/icon/play.png" alt="">
-            <span>...</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <?php }?>
+    <?php }} ?>
+  <?php }} ?>
   </section>
   
   <?php $_template = new Smarty_Internal_Template("footer.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);

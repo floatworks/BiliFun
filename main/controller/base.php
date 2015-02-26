@@ -13,8 +13,7 @@ class base extends spController {
 		} else {
 			$this->__SITE = rtrim($conf['siteurl'], '/');
 			$this->__RESOURCE = $this->__SITE . '/' . 'assets';
-			// 分类菜单 -- cid: 分类ID
-			$this->cate = spClass('m_category')->findAll(null, 'cid ASC, id DESC');
+
 		};
 	}
 }

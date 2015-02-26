@@ -29,19 +29,13 @@ $spConfig = array(
 	/* 伪静态 */
 	'ext' => array(
 		'spUrlRewrite' => array(
-			'suffix' => '.html',
-			'sep' => '-',
+			'suffix' => '',
+			'sep' => '/',
 			'map' => array(
-				'article' => 'main@news',
-				'product' => 'main@prod',
-				'pages' => 'main@spag',
-				'guestbook' => 'main@mess',
-				'message' => 'main@subms',
-				'imgvc' => 'main@imgvc'
+				'v' => 'main@prod',
 			),
 			'args' => array(
-				'article' => array('id','cid'),
-				'product' => array('id','cid'),
+				'v' => array('id','pid'),
 				'pages' => array('id'),
 			)
 		)

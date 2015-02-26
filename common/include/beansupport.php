@@ -9,7 +9,7 @@ class beansupport {
 
 	public function __construct() {
 		$this->field['id'] = isset($field['0']) ? $field['0'] : 'id';
-		$this->field['vid'] = isset($field['1']) ? $field['1'] : 'vid';
+		$this->field['cid'] = isset($field['1']) ? $field['1'] : 'cid';
 		$this->field['title'] = isset($field['2']) ? $field['2'] : 'title';
 		// $this->field['description'] = isset($field['3']) ? $field['3'] : 'description';
 
@@ -21,7 +21,7 @@ class beansupport {
 			$data = $this->originList;
 		}
 		foreach ($data as $cate) {
-			if ($cate[$this->field['vid']] == $vid) {
+			if ($cate[$this->field['cid']] == $vid) {
 				$children = $cate;
 			}
 		}

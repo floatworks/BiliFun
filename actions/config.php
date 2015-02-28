@@ -35,7 +35,7 @@ $spConfig = array(
 				'v' => 'main@prod',
 			),
 			'args' => array(
-				'v' => array('id','pid'),
+				'v' => array('id', 'pid'),
 				'pages' => array('id'),
 			)
 		)

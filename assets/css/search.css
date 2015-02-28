@@ -1,23 +1,12 @@
-@font-face{
-	font-family: "loveletter";
-	scr:url('../fonts/MFQingShu_Noncommercial-Regular.otf')format('opentype');
+*{
+	margin: 0;
+	padding: 0;
 }
 div:before, div:after {
   content: " ";
   display: table;
 }
-*{
-	list-style: none;
-	text-decoration: none;
-	font-family: 'loveletter';
-}
-a{
-	text-decoration: none;
-	color: #333;
-}
-a:hover {
-	color: #333;
-}
+
 
 /* header */
 #particleground{
@@ -65,51 +54,40 @@ a:hover {
 	margin-top: 100px;
 }
 
-
-/* main */
-.my-content{
-	margin-top: 100px;
+/* 搜索框 */
+.main-search{
+	margin-top: 80px;
+}
+.search-form{
+	width: 400px !important;
 }
 
-/* 播放 */
-.my-video{
-	width: 80%;
-	margin-top: 50px;
-	margin-left: 10%;
-	border: #888 1px solid;
+/* 结果栏 */
+.main-result{
+	background: #eee;
+	border: #777;
 	border-radius: 10px;
 }
-.video-tag{
-	padding: 5px 0px 0px 10px;
-	margin-top: 5px;
-	background: #fff;
-	border: #999 1px solid;
-	border-radius: 5px;
+.audience-result{
+	margin-top: 10px;
+	margin-left: 10px;
+
 }
-.my-input{
-	border: #444 1px solid;
-	margin-left: 10%;
-	width: 72.5%;
-	border-radius: 5px;
+.audience-result a>span{
+	font-size: 30px;
 }
-.shoot{
-	background: #999;
-}
-.shoot:hover{
-	background: #777;
+.audience-result hr{
+	border: #888 1px solid;
 }
 
 
-
-/* 评论 */
-.say-form .btn{
-	margin-top: 2px;
+/*footer*/
+#my-footer{	
+	margin-top: 100px;
+	padding-bottom: 50px;
+	color: #000;
+	background: none;
 }
-.comment-content{
-  font-size: 13px;
-  display: block;
-  width: auto;
-  padding: 5px 15px 0px;
-  white-space: normal;
-  word-wrap: break-word;
+#my-footer a{
+	color: #000;
 }

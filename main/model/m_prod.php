@@ -3,7 +3,7 @@ defined('APP_PATH') or exit ('Access Denied');
 
 class m_prod extends spModel {
 	public $table = 'prod';
-	public $pk = 'pid';
+	public $pk = 'id';
 
 	public $verifier = array(
 		'rules' => array(

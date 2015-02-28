@@ -20,6 +20,7 @@ class main extends base {
 		$this->__TYPE = 'prod';
 
 		if ($id = intval($this->spArgs('id'))) {
+
 			$prow = spClass('m_prod')->spLinker()->find(array('id' => $id));
 
 			$thumb = spClass('m_thumb')->find(array(
@@ -35,8 +36,14 @@ class main extends base {
 			$this->prev = spClass('m_prod')->find("pid='$prow[pid]' AND id > '$id'", 'id ASC');
 			$this->next = spClass('m_prod')->find("pid='$prow[pid]' AND id < '$id'", 'id DESC');
 			// 分类
-			$this->crow = $crow = spClass('m_category')->find(array('id' => $prow['pid']));
+			$this->crow = $crow = spClass('m_category')->find(array('cid' => $prow['category']['cid']));
 			$this->__PID = $crow['pid'];
+
+			// 标签
+			$this->tags = spClass('m_tags')->spLinker()->findAll(array('tid' => $tid));
+
+			// 评论
+			$this->comment = spClass('m_comment')->findAll(array('author_id' => $prow['author_id']), 'reply_num DESC, addtime DESC, id ASC');
 
 			$this->display('video.html');
 		} elseif ($pid = intval($this->spArgs('pid'))) {

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-26 14:25:11
+<?php /* Smarty version Smarty-3.0.8, created on 2015-02-28 23:52:53
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/video.html" */ ?>
-<?php /*%%SmartyHeaderCode:162552224854eebc47cc03b8-05140825%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:153372877254f1e455c913a0-67919833%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3849491e9c0cbc49a38ae64924f82d43687f42aa' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/video.html',
-      1 => 1424931908,
+      1 => 1425138770,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '162552224854eebc47cc03b8-05140825',
+  'nocache_hash' => '153372877254f1e455c913a0-67919833',
   'function' => 
   array (
   ),
@@ -66,7 +66,8 @@ $_smarty_tpl->decodeProperties(array (
 		<div class="video-tag">
 			<p><span> 标签：</span><a href="#"> hhhh </a></p>
 			<hr>
-			<p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+			<p><?php echo $_smarty_tpl->getVariable('prow')->value['description'];?>
+</p>
 		</div>
 
 		<hr>
@@ -76,20 +77,37 @@ $_smarty_tpl->decodeProperties(array (
 			<p>说两句呗~o(*￣▽￣*)ブ</p>
 			<form class="say-form">
 				<textarea class="form-control" rows="4" name="message"></textarea>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary"> 发表评论 </button>
 			</form>
+
+
+
 			<h6>评论区</h6>
 			<hr>
 			<div class="panel panel-default">
+
 		  	<div class="panel-body">
-		   	<h6>
-		    	<a href="">月落丶音阑</a>
-		    </h6>
-		    <p>沙发~~~~~~</p>
-		    <span class = "time">...</span>
+		  		<?php  $_smarty_tpl->tpl_vars[$_smarty_tpl->getVariable('bfc')->value] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('comment')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars[$_smarty_tpl->getVariable('bfc')->value]->key => $_smarty_tpl->tpl_vars[$_smarty_tpl->getVariable('bfc')->value]->value){
+?>
+	   			<span class="badge badge-info"><?php echo $_smarty_tpl->getVariable('bfc')->value['replyer_id'];?>
+</span>
+	    		<a href=""><?php echo $_smarty_tpl->getVariable('bfc')->value['replyer'];?>
+</a>
+	    		<span class="time"><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('bfc')->value['addtime'],"%Y-%m-%d %H:%M:%S");?>
+</span>
+	    		<span><a class="btn-quote">[回复]</a></span>
+		    	<div class="comment-content">
+		    		<p><?php echo $_smarty_tpl->getVariable('bfc')->value['content'];?>
+<p>
+		    	</div>
+		    	<?php }} ?>
 		  	</div>
+
 			</div>
-	</div>
+		</div>
 	
 	<?php $_template = new Smarty_Internal_Template("footer.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>

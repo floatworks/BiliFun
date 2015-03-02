@@ -8,10 +8,10 @@ class m_tags extends spModel {
 	public $linker = array(
 		array(
 			'type' => 'hasone',
-			'map' => 'category',
-			'mapkey' => 'tid', // 标签id
-			'fclass' => 'm_category',
-			'fkey' => 'cid',
+			'map' => 'prod',
+			'mapkey' => 'video_id', // 标签id
+			'fclass' => 'm_prod',
+			'fkey' => 'pid',
 			'enabled' => true,
 		),
 	);

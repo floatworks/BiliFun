@@ -19,6 +19,7 @@ $spConfig = array(
 			/* 结束符变量: 指明在查找模板变量时的左右分割符。 */
 			'left_delimiter' => '<{',
 			'right_delimiter' => '}>',
+			'allow_php_tag' => true,
 		),
 	),
 	'launch' => array(
@@ -35,7 +36,7 @@ $spConfig = array(
 				'v' => 'main@prod',
 			),
 			'args' => array(
-				'v' => array('id', 'pid'),
+				'v' => array('pid', 'id'),
 				'pages' => array('id'),
 			)
 		)

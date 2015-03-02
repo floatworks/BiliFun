@@ -25,7 +25,7 @@ class m_prod extends spModel {
 		array(
 			'type' => 'hasone',
 			'map' => 'category',
-			'mapkey' => 'pid',     // 视频产品id
+			'mapkey' => 'channel_id',     // 视频频道id
 			'fclass' => 'm_category',
 			'fkey' => 'cid',
 			'enabled' => true,

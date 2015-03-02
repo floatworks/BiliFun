@@ -50,6 +50,7 @@
   <!-- main -->
   <section id="Video">
   <{foreach from=$cate item=bfv name=video}>
+  <{if $bfv.stat < 0}>
     <!-- <{$bfv.name}> -->
     <div id="my-<{$bfv.name}>" class="my-list">
       <div class="dark"></div>
@@ -58,37 +59,18 @@
     <{if $bfp.channel eq $bfv.name}>
     <div id="<{$bfv.name}>-content" class="my-content">
       <div class="row video-pic-box">
-
         <div class="video-pic">
-        <a href="<{spUrl c=main a=prod id=$bfp.id}>" class="thumbnail">
+        <a href="<{spUrl c=main a=prod pid=$bfp.pid}>" class="thumbnail">
           <img src="<{$__RESOURCE}>/<{$bfp.thumb}>" data-src="holder.js/100%x180" alt="<{$bfp.video_name}>">
           <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="playing">
           <span><{$bfp.video_name}></span>
         </a>
         </div>
-
-        <div class="video-pic">
-        <a href="<{spUrl c=main a=prod id=$bfp.id}>" class="thumbnail">
-          <img src="<{$__RESOURCE}>/<{$bfp.thumb}>" data-src="holder.js/100%x180" alt="<{$bfp.video_name}>">
-          <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="playing">
-          <span><{$bfp.video_name}></span>
-        </a>
-        </div>
-        
-        <div class="video-pic">
-        <a href="<{spUrl c=main a=prod id=$bfp.id}>" class="thumbnail">
-          <img src="<{$__RESOURCE}>/<{$bfp.thumb}>" data-src="holder.js/100%x180" alt="<{$bfp.video_name}>">
-          <img class="pic-hover" src="<{$__RESOURCE}>/img/icon/play.png" alt="playing">
-          <span><{$bfp.video_name}></span>
-        </a>
-        </div>
-
       </div>
-
-
     </div>
     <{/if}>
     <{/foreach}>
+  <{/if}>
   <{/foreach}>
   </section><!-- 循环输出视频views量最高的前几个，固定下宽度好让div能够自动换行 -->
   

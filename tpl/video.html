@@ -18,7 +18,7 @@
 		<!-- 视频信息 -->
 		<div class="row">
 			<div class="col-md-10">
-				<p class="lead"><{$prow.channel}></p>
+				<p class="lead"><{$crow.category}></p>
 				<span class="person-name"><{$prow.author}></span><span>发布于</span><span class="time"><{$prow.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
 			</div>
 			<div class="col-md-2">
@@ -43,7 +43,7 @@
 
 		<!-- 标签 -->
 		<div class="video-tag">
-			<p><span> 标签：</span><a href="#"> hhhh </a></p>
+			<p><span> 标签：</span><{section name=bft loop=$tags}><a href="#"> <{$tags[bft].words}> </a> <{/section}> </p>
 			<hr>
 			<p><{$prow.description}></p>
 		</div>
@@ -58,22 +58,20 @@
 				<button type="submit" class="btn btn-primary"> 发表评论 </button>
 			</form>
 
-
-
 			<h6>评论区</h6>
 			<hr>
 			<div class="panel panel-default">
 
 		  	<div class="panel-body">
-		  		<{foreach from=$comment item=$bfc}>
-	   			<span class="badge badge-info"><{$bfc.replyer_id}></span>
-	    		<a href=""><{$bfc.replyer}></a>
-	    		<span class="time"><{$bfc.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
+		  		<{section loop=$comment name=bfc}>
+	   			<span class="badge badge-info"><{$comment[bfc].reply_id}></span>
+	    		<a href=""><{$comment[bfc].replyer}></a>
+	    		<span class="time"><{$comment[bfc].addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
 	    		<span><a class="btn-quote">[回复]</a></span>
 		    	<div class="comment-content">
-		    		<p><{$bfc.content}><p>
+		    		<p><{$comment[bfc].contents}><p>
 		    	</div>
-		    	<{/foreach}>
+		    	<{/section}>
 		  	</div>
 
 			</div>

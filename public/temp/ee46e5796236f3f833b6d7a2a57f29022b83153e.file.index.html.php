@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-26 13:56:28
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-02 20:39:54
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:26563500454eeb58c1fbe47-87382307%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:98244218054f45a1ac9d252-86513623%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee46e5796236f3f833b6d7a2a57f29022b83153e' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/index.html',
-      1 => 1424930185,
+      1 => 1425299990,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '26563500454eeb58c1fbe47-87382307',
+  'nocache_hash' => '98244218054f45a1ac9d252-86513623',
   'function' => 
   array (
   ),
@@ -120,11 +120,10 @@ if ($_smarty_tpl->_count($_from) > 0){
   <section id="Video">
   <?php  $_smarty_tpl->tpl_vars['bfv'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('cate')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['video']['iteration']=0;
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['bfv']->key => $_smarty_tpl->tpl_vars['bfv']->value){
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['video']['iteration']++;
 ?>
+  <?php if ($_smarty_tpl->tpl_vars['bfv']->value['stat']<0){?>
     <!-- <?php echo $_smarty_tpl->tpl_vars['bfv']->value['name'];?>
  -->
     <div id="my-<?php echo $_smarty_tpl->tpl_vars['bfv']->value['name'];?>
@@ -139,10 +138,9 @@ if ($_smarty_tpl->_count($_from) > 0){
     <?php if ($_smarty_tpl->tpl_vars['bfp']->value['channel']==$_smarty_tpl->tpl_vars['bfv']->value['name']){?>
     <div id="<?php echo $_smarty_tpl->tpl_vars['bfv']->value['name'];?>
 -content" class="my-content">
-      <div class="row row-<?php echo $_smarty_tpl->getVariable('smarty')->value['foreach']['video']['iteration'];?>
-">
-        <div class="col-xs-6 col-md-6">
-        <a href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'main','a'=>'prod','id'=>$_smarty_tpl->tpl_vars['bfp']->value['id']),$_smarty_tpl);?>
+      <div class="row video-pic-box">
+        <div class="video-pic">
+        <a href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'main','a'=>'prod','pid'=>$_smarty_tpl->tpl_vars['bfp']->value['pid']),$_smarty_tpl);?>
 " class="thumbnail">
           <img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['bfp']->value['thumb'];?>
@@ -158,8 +156,9 @@ if ($_smarty_tpl->_count($_from) > 0){
     </div>
     <?php }?>
     <?php }} ?>
+  <?php }?>
   <?php }} ?>
-  </section>
+  </section><!-- 循环输出视频views量最高的前几个，固定下宽度好让div能够自动换行 -->
   
   <?php $_template = new Smarty_Internal_Template("footer.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>

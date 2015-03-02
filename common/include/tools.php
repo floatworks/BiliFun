@@ -51,3 +51,39 @@ function moveUpload_file($fileName, $targetName = '') {
 	return false;
 }
 
+// 随机密码
+function get_random_passwd($length = 8) {
+
+	$passwd_characters = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjklmnpqrstuvwxyz';   // 去掉英文字母I,O
+	$total_passwd_char = strlen($passwd_characters) - 1;
+	$digit = modrand(0, $length - 1);
+	$newpasswd = '';
+	for ($i = 0; $i < $length; $i++) { 
+		if ($i == $digit) {
+			$newpasswd = chr(modrand(48, 57));
+			continue;
+		}
+		$newpasswd .= $passwd_characters{
+			modrand(0, $total_passwd_char)
+		};
+	}
+	return $newpasswd;
+
+}
+/**
+ *  @param $min 最小值
+ *  @param $max 最大值
+ *  @param $seed 随机器种子
+ *
+**/
+function modrand($min = 0, $max = 0, $seed = -1) {
+	mt_rand(crc32(microtime()));
+	if ($max and $max <= mt_getrandmax()) {
+		$number = mt_rand($min, $max);
+	} else {
+		$number = mt_rand();
+	}
+	mt_srand();
+
+	return $number;
+}

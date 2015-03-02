@@ -24,6 +24,17 @@ class m_comment extends spModel {
 		),
 	);
 
+	var $linker = array(
+		array(
+			'type' => 'hasone',
+			'map' => 'prod',
+			'mapkey' => 'pid',
+			'fclass' => 'm_prod',
+			'fkey' => 'pid',
+			'enabled' => true,
+		),
+	);
+
 	// 覆写CREATE
 	public function create($new) {
 		$new = array_merge($new, array(

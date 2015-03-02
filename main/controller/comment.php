@@ -1,7 +1,7 @@
 <?php
 defined('APP_PATH') or exit ('Access Denied');
 
-class comment extends spController {
+class comment extends check {
 	
 	public function add() {
 		if (false != spClass('m_comment')->spVerifier($this->spArgs())) {

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-28 22:29:17
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-02 20:36:45
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/header.html" */ ?>
-<?php /*%%SmartyHeaderCode:197227079554f1d0bd00caf0-08409117%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:209516295554f21abb990cc6-77137116%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '57ed5a72b6ecd811a1aacfc32b7ef0339c4cdbd5' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/header.html',
-      1 => 1425133754,
+      1 => 1425299625,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '197227079554f1d0bd00caf0-08409117',
+  'nocache_hash' => '209516295554f21abb990cc6-77137116',
   'function' => 
   array (
   ),
@@ -33,6 +33,10 @@ $_smarty_tpl->decodeProperties(array (
 /css/base.css">
 <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /css/video.css">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/css/individualcenter.css">
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/css/search.css">
 
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/jquery.min.js"></script>
@@ -46,3 +50,9 @@ $_smarty_tpl->decodeProperties(array (
 /js/slider.min.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/scrollspy.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/js/video.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/js/jquery.scrollto.js"></script>
+<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/js/individualcenter.js"></script>

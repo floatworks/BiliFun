@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 // list change
 $(document).ready(function() {
-	$("#my-anime").click(function() {
+	$("#mylist-anime").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
 			$("#anime-content").css('display', 'none');
 		}
@@ -35,7 +35,7 @@ $(document).ready(function() {
 	});
 });
 $(document).ready(function() {
-	$("#my-music").click(function() {
+	$("#mylist-music").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
 			$("#anime-content").css('display', 'none');
 		}
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	});
 });
 $(document).ready(function() {
-	$("#my-entertainment").click(function() {
+	$("#mylist-entertainment").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
 			$("#anime-content").css('display', 'none');
 		}
@@ -71,7 +71,7 @@ $(document).ready(function() {
 	});
 });
 $(document).ready(function() {
-	$("#my-technology").click(function() {
+	$("#mylist-technology").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
 			$("#anime-content").css('display', 'none');
 		}

@@ -67,9 +67,10 @@ a:hover {
 
 
 /* main */
-.my-content{
+.myvideo-content{
 	padding: 0 100px;
 	margin: 100px auto 0 auto;
+	width: 100%;
 }
 
 /* 播放 */

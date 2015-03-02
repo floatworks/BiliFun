@@ -1,0 +1,31 @@
+<{include file="header.html"}>
+	<title>提示页面</title>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var jumptime = 2;
+			setInterval(function() {
+				if (jumptime == 0) {
+<{if $url}>
+					location.href = '<{$url}>';
+<{else}>
+					window.history.back();
+<{/if}>
+				} else {
+					$("span").html(jumptime);
+				}
+				jumptime--;
+			}, 1000);
+		});
+	</script>
+</head>
+<body>
+	<div class="message">
+		<div class="con">
+			<h2>温馨提示</h2>
+			<h3><{$message}><h3>
+			<p>载入页面还需要 <span class="warning">3</span>秒钟， 请稍候...<br />你也可以选择点击链接直接进入</p>
+			<p><a href="<{if $url }> <{$url}> <{else}> javascript:; <{/if}>" class="jumpurl">点击此处</a>直接跳转至指定页面</p>
+		</div>
+	</div>
+</body>
+</html>

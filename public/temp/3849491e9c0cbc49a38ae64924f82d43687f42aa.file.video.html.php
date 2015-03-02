@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-02 20:41:42
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 01:12:56
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/video.html" */ ?>
-<?php /*%%SmartyHeaderCode:98705835254f45a86053964-46585138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9624346754f49a18045309-85838061%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3849491e9c0cbc49a38ae64924f82d43687f42aa' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/video.html',
-      1 => 1425300066,
+      1 => 1425316374,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '98705835254f45a86053964-46585138',
+  'nocache_hash' => '9624346754f49a18045309-85838061',
   'function' => 
   array (
   ),
@@ -38,7 +38,7 @@ $_smarty_tpl->decodeProperties(array (
 	<div id="danmaku"></div>
 
 	<!-- main -->
-	<div class="my-content">
+	<div class="myvideo-content">
 
 		<!-- 视频信息 -->
 		<div class="row">
@@ -110,7 +110,6 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['bft']['last']       = ($_sma
 				<textarea class="form-control" rows="4" name="message"></textarea>
 				<button type="submit" class="btn btn-primary"> 发表评论 </button>
 			</form>
-
 			<h6>评论区</h6>
 			<hr>
 			<div class="panel panel-default">

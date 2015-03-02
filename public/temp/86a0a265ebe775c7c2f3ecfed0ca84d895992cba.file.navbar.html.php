@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-01 04:23:34
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 02:57:36
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/navbar.html" */ ?>
-<?php /*%%SmartyHeaderCode:176905067954f223c6839db8-01319414%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:148657984954f4b2a0f35b86-81813332%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '86a0a265ebe775c7c2f3ecfed0ca84d895992cba' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/navbar.html',
-      1 => 1425154967,
+      1 => 1425322653,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '176905067954f223c6839db8-01319414',
+  'nocache_hash' => '148657984954f4b2a0f35b86-81813332',
   'function' => 
   array (
   ),
@@ -22,8 +22,9 @@ $_smarty_tpl->decodeProperties(array (
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <span id="my-title" class="navbar-brand"><?php echo $_smarty_tpl->getVariable('conf')->value['sitename'];?>
-</span>
+          <span id="my-title" class="navbar-brand"><a style="color:#fff;" href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'main','a'=>'index'),$_smarty_tpl);?>
+"><?php echo $_smarty_tpl->getVariable('conf')->value['sitename'];?>
+</a></span>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
@@ -31,13 +32,14 @@ $_smarty_tpl->decodeProperties(array (
             <div class="form-group">
               <input type="text" placeholder="夢" id="form-bg" class="form-control" />
             </div>
-            <button type="submit" class="btn">寻 夢</button>
+            <button type="submit" class="btn"><a href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'search','a'=>'show'),$_smarty_tpl);?>
+">寻 夢</a></button>
           </form>
           <!--  -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="my-nav1" href="#"> 登录</a></li>
-            <li><a id="my-nav2" href="#"> 投稿</a></li>
-            <li><a id="my-nav3" href="#"> 收藏</a></li>
+            <li><a id="my-nav1" href="#">登录</a></li>
+            <li><a id="my-nav2" href="#">投稿</a></li>
+            <li><a id="my-nav3" href="#">收藏</a></li>
           </ul>
           <div class="my-navbar">
             <ul class="nav navbar-nav navbar-right nav-pills">

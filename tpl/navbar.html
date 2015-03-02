@@ -3,7 +3,7 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <span id="my-title" class="navbar-brand"><{$conf.sitename}></span>
+          <span id="my-title" class="navbar-brand"><a style="color:#fff;" href="<{spUrl c=main a=index}>"><{$conf.sitename}></a></span>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
@@ -11,13 +11,13 @@
             <div class="form-group">
               <input type="text" placeholder="夢" id="form-bg" class="form-control" />
             </div>
-            <button type="submit" class="btn">寻 夢</button>
+            <button type="submit" class="btn"><a href="<{spUrl c=search a=show}>">寻 夢</a></button>
           </form>
           <!--  -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="my-nav1" href="#"> 登录</a></li>
-            <li><a id="my-nav2" href="#"> 投稿</a></li>
-            <li><a id="my-nav3" href="#"> 收藏</a></li>
+            <li><a id="my-nav1" href="#">登录</a></li>
+            <li><a id="my-nav2" href="#">投稿</a></li>
+            <li><a id="my-nav3" href="#">收藏</a></li>
           </ul>
           <div class="my-navbar">
             <ul class="nav navbar-nav navbar-right nav-pills">

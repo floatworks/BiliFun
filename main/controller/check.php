@@ -31,7 +31,7 @@ class check extends spController {
 		$this->message = $message;
 		$this->url = $url;
 
-		$this->display('message.tpl.php');
+		$this->display('message.html');
 
 		exit;
 	}
@@ -40,7 +40,7 @@ class check extends spController {
 		$this->message = $message;
 		$this->url = $url;
 
-		$this->display('message.tpl.php');
+		$this->display('message.html');
 
 		exit;
 	}

@@ -135,7 +135,7 @@ a:hover {
 
 /* 视频 */
 .form-control{
-	width: 500px !important;
+	/*width: 500px !important;*/
 }
 .my-form button{
 	background: #0077EC;
@@ -147,15 +147,6 @@ a:hover {
 #i-2-2 p,#i-2-3 p{
 	color: #333;
 }
-
-
-
-
-
-
-
-
-
 
 /*footer*/
 #my-footer{	

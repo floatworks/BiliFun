@@ -37,6 +37,7 @@ body {
   color: #6cf;
   line-height: 1.0;
   -webkit-font-smoothing: antialiased;
+  min-width: 768px;
 }
 
 
@@ -171,43 +172,37 @@ body {
 	z-index: 3;
 	background: none;
 }
-#my-anime,#my-music,#my-entertainment,#my-technology{
+[id|=mylist] {
 	float: left;
-
 }
-#my-anime{
+#mylist-anime{
 	background-image: url(../img/pink.jpg);
 	cursor:pointer;
 }
-#my-music{
+#mylist-music{
 	background-image: url(../img/rainy.jpg);
 	cursor:pointer;
 }
-#my-entertainment{
+#mylist-entertainment{
 	background-image: url(../img/water.jpg);
 	cursor:pointer;
 }
-#my-technology{
+#mylist-technology{
 	background-image: url(../img/storm.jpg);
 	cursor:pointer;
 }
 .my-content{
 	float: left;
 	height: 700px;
-<<<<<<< Updated upstream
 }
 .video-pic-box{
-	overflow-x: hidden;
+	width: 159px;
+    padding-right: 24px;
+    margin-top: 20px;
+    display: inline-table;
 }
-=======
-}
-.video-pic-box{
-	overflow-x: hidden;
-}
->>>>>>> Stashed changes
 .video-pic{
 	width: 175px;
-	padding-top: 40px;
 	margin-left: 74px;
 	padding-bottom: 40px;
 	float: left;
@@ -227,25 +222,15 @@ body {
 
 
 /*content*/
-#anime-content{
-	display: block;
-	background: #eee;
-	width: 539.5px;
-}
-#music-content{
-	display: none;
-	background: #eee;
-	width: 539.5px;
-}
-#entertainment-content{
-	display: none;
-	background: #eee;
-	width: 539.5px;
-}
-#technology-content{
-	display: none;
-	background: #eee;
-	width: 539.5px;
+@media screen and (min-width:1024px) {
+	ul[id$="content"] {
+		background: #eee;
+		list-style: none;
+	    overflow-x: hidden;
+	    width: 40%;
+	    position: relative;
+	    min-width: 300px;
+	}
 }
 
 /*footer*/

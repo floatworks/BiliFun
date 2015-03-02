@@ -16,4 +16,23 @@ class base extends spController {
 
 		};
 	}
+
+	public function success($message, $url = '') {
+		$this->message = $message;
+		$this->url = $url;
+
+		$this->display('message.html');
+
+		exit;
+	}
+
+	public function error($message, $url = '') {
+		$this->message = $message;
+		$this->url = $url;
+
+		$this->display('message.html');
+
+		exit;
+	}
+	
 }

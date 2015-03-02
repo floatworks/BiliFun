@@ -1,4 +1,6 @@
 <{include file="header.html"}>
+<link rel="stylesheet" href="<{$__RESOURCE}>/css/video.css">
+<script type="text/javascript" src="<{$__RESOURCE}>/js/barrage.js"></script>
 <title><{$prow.video_name}></title>
 </head>
 
@@ -7,8 +9,11 @@
 		<{include file="navbar.html"}>
 	</header>
 
+	<!-- 弹幕画布 -->
+	<div id="danmaku"></div>
+
 	<!-- main -->
-	<div class="container my-content">
+	<div class="my-content">
 
 		<!-- 视频信息 -->
 		<div class="row">
@@ -75,6 +80,31 @@
 		</div>
 	
 	<{include file="footer.html"}>
+
+<script type="text/javascript">
+  
+  var heitan = {};
+  heitan.y_pos = 300;
+  heitan.content = "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
+  Barrage.bullet.launch(heitan, "");
+ 
+  var heitan = {};
+  heitan.y_pos = 350;
+  heitan.content = "卧槽";
+  Barrage.bullet.launch(heitan, "");
+ 
+  var heitan = {};
+  heitan.y_pos = 150;
+  heitan.content = "3333!";
+  Barrage.bullet.launch(heitan, "");
+ 
+  var heitan = {};
+  heitan.y_pos = 20;
+  heitan.content = "44444!!!!";
+  Barrage.bullet.launch(heitan, "");
+
+</script>
+
 
 </body>
 </html>

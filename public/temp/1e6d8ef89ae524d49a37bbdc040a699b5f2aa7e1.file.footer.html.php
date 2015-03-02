@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-02-21 10:40:16
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 07:38:02
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/footer.html" */ ?>
-<?php /*%%SmartyHeaderCode:82047117054e7f010b8ab70-16965216%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:17469137054f4f45a8b17f5-26567866%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1e6d8ef89ae524d49a37bbdc040a699b5f2aa7e1' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/footer.html',
-      1 => 1424447358,
+      1 => 1425339480,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '82047117054e7f010b8ab70-16965216',
+  'nocache_hash' => '17469137054f4f45a8b17f5-26567866',
   'function' => 
   array (
   ),
@@ -20,8 +20,8 @@ $_smarty_tpl->decodeProperties(array (
 <!-- footer -->
   <footer>
     <div id="my-footer">
-      <ul class="list-inline text-center ">
-        <li>当前版本: v2.0.0</li>
+      <ul class="list-inline text-center">
+        <li>当前版本: v3.0.0</li>
         <li>|</li>
         <li><a href="#">关于</a></li>
         <li>|</li>
@@ -31,3 +31,40 @@ $_smarty_tpl->decodeProperties(array (
       </ul>
     </div>
   </footer>
+  
+
+  <div id="login-box" class="downbox" style="display: none; overflow : hidden;">
+    <div class="down_box_t">
+      <h5 class="text-center">——————用户登录——————</h5>
+    </div>
+    <div class="down_box_b row">
+      <div class="box-side" style="border-right: 1px #777 solid;">
+        <p>还没有账号吗&gt;_ &lt; ?</p>
+        <p>快来加入我们吧&gt;w &lt; ~</p>
+        <button class="btn login-btn">立即注册</button>
+      </div>
+      <div class="box-side">
+      <form role="login" action="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'user','a'=>'login'),$_smarty_tpl);?>
+" method="post">
+        <input name="username" type="text" placeholder=" 账号" class=""><p></p>
+        <input name="password" type="text" placeholder=" 密码" class=""><p></p>
+        <button id="btn-1" class="btn login-btn">登陆</button>
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script>
+      $(function() {
+        $(".my-login").fancybox({
+          fitToView: false,
+          width: 625,
+          height: 365,
+          autoSize: false,
+          closeClick : false,
+          openEffect: 'fade',
+          closeEffect: 'none'
+        });
+      });
+    </script>

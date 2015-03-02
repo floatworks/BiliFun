@@ -13,6 +13,7 @@ class base extends spController {
 		} else {
 			$this->__SITE = rtrim($conf['siteurl'], '/');
 			$this->__RESOURCE = $this->__SITE . '/' . 'assets';
+			$this->__VIDEO = $this->__SITE . '/' . 'public/video';
 
 		};
 	}
@@ -33,6 +34,11 @@ class base extends spController {
 		$this->display('message.html');
 
 		exit;
+	}
+
+	public function imgvc() {
+		require 'common/include/image.php';
+		Image::buildImageVerify();
 	}
 	
 }

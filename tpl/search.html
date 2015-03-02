@@ -1,5 +1,6 @@
 <{include file="header.html"}>
 <title>搜索页-</title>
+<link rel="stylesheet" href="<{$__RESOURCE}>/css/search.css">
 </head>
 <body>
 	<header id="my-header">
@@ -24,10 +25,10 @@
 	
 	<!-- 搜索栏 -->
 	<div class="text-center main-search">
-		<img class="" src="../assets/img/c.png" alt="">
-		<form class="navbar-form" role="search">
+		<img class="" src="<{$__RESOURCE}>/img/c.png" alt="">
+		<form class="navbar-form" role="search" action="<{spUrl c=search a=show}>" method="get">
       <div class="form-group">
-        <input type="text" placeholder="在此输入关键字" id="form-bg" class="form-control search-form" />
+        <input name="comfirm_words" type="text" placeholder="在此输入关键字" id="form-bg" class="form-control search-form" />
       </div>
       <button type="submit" class="btn">寻 夢</button>
     </form>
@@ -35,47 +36,23 @@
 	
 	<!-- 结果栏 -->
 	<div class="container">
-		<h4>"<span>动画</span>"搜索结果</h4>
+		<h4>"<span><{$search_words}></span>"的搜索结果</h4>
 		<hr>
 
 		<div class="main-result">
-
+		<{section loop=$result name=search}>
 			<div class="audience-result">
-	    	<a href="">
-	    		<img src="../assets/img/anime/img2.png" alt="" class="img-rounded">
-	    		<span>动画1</span>
+	    	<a href="<{spUrl c=main a=prod pid=$result[search].pid}>">
+	    		<img src="<{$__RESOURCE}>/<{$result[search].thumb}>" alt="<{$result[search].description}>" class="img-rounded">
+	    		<span><{$result[search].video_name}></span>
 	    	</a>
-	    	<p><span>简介：</span>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-	    	<p>由<a href="">月落丶音阑</a>投稿于
-	    		<span class="time">2015-02-22 22:11:43</span>
+	    	<p><span>简介：</span><{$result[search].description}></p>
+	    	<p>由<a href=""><{$result[search].author}></a>投稿于
+	    		<span class="time"><{$result[search].addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
 				</p>
 				<hr>
 			</div>
-
-			<div class="audience-result">
-	    	<a href="">
-	    		<img src="../assets/img/anime/img3.png" alt="" class="img-rounded">
-	    		<span>动画2</span>
-	    	</a>
-	    	<p><span>简介：</span>233333333333333333333333333333333333</p>
-	    	<p>由<a href="">月落丶音阑</a>投稿于
-	    		<span class="time">2015-02-22 22:11:43</span>
-				</p>
-				<hr>
-			</div>
-
-			<div class="audience-result">
-	    	<a href="">
-	    		<img src="../assets/img/anime/img4.png" alt="" class="img-rounded">
-	    		<span>动画3</span>
-	    	</a>
-	    	<p><span>简介：</span>6666666666666666666666666666</p>
-	    	<p>由<a href="">月落丶音阑</a>投稿于
-	    		<span class="time">2015-02-22 22:11:43</span>
-				</p>
-				<hr>
-			</div>
-
+		<{/section}>
 		</div>
 	</div>
 

@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 02:15:41
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 05:11:03
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/search.html" */ ?>
-<?php /*%%SmartyHeaderCode:169743556354f4a8cd9284a9-42184627%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12787841554f4d1e758a755-39375434%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '18029b273f4835e653e9cfe770d68444d124b6a1' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/search.html',
-      1 => 1425320113,
+      1 => 1425330661,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '169743556354f4a8cd9284a9-42184627',
+  'nocache_hash' => '12787841554f4d1e758a755-39375434',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php $_template = new Smarty_Internal_Template("header.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+<?php if (!is_callable('smarty_modifier_date_format')) include '/Users/Haku/Documents/Github/BiliFun/common/SpeedPHP/Drivers/Smarty/plugins/modifier.date_format.php';
+?><?php $_template = new Smarty_Internal_Template("header.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
 <title>搜索页-</title>
 </head>
@@ -46,10 +47,12 @@ $_smarty_tpl->decodeProperties(array (
 	
 	<!-- 搜索栏 -->
 	<div class="text-center main-search">
-		<img class="" src="../assets/img/c.png" alt="">
-		<form class="navbar-form" role="search">
+		<img class="" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/img/c.png" alt="">
+		<form class="navbar-form" role="search" action="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'search','a'=>'show'),$_smarty_tpl);?>
+" method="get">
       <div class="form-group">
-        <input type="text" placeholder="在此输入关键字" id="form-bg" class="form-control search-form" />
+        <input name="comfirm_words" type="text" placeholder="在此输入关键字" id="form-bg" class="form-control search-form" />
       </div>
       <button type="submit" class="btn">寻 夢</button>
     </form>
@@ -57,47 +60,55 @@ $_smarty_tpl->decodeProperties(array (
 	
 	<!-- 结果栏 -->
 	<div class="container">
-		<h4>"<span>动画</span>"搜索结果</h4>
+		<h4>"<span><?php echo $_smarty_tpl->getVariable('search_words')->value;?>
+</span>"的搜索结果</h4>
 		<hr>
 
 		<div class="main-result">
+		<?php unset($_smarty_tpl->tpl_vars['smarty']->value['section']['search']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['loop'] = is_array($_loop=$_smarty_tpl->getVariable('result')->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['name'] = 'search';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['search']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['search']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['search']['show']):
 
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['search']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['search']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['search']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['search']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['total']);
+?>
 			<div class="audience-result">
-	    	<a href="">
-	    		<img src="../assets/img/anime/img2.png" alt="" class="img-rounded">
-	    		<span>动画1</span>
+	    	<a href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'main','a'=>'prod','pid'=>$_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['pid']),$_smarty_tpl);?>
+">
+	    		<img src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/<?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['thumb'];?>
+" alt="<?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['description'];?>
+" class="img-rounded">
+	    		<span><?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['video_name'];?>
+</span>
 	    	</a>
-	    	<p><span>简介：</span>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-	    	<p>由<a href="">月落丶音阑</a>投稿于
-	    		<span class="time">2015-02-22 22:11:43</span>
+	    	<p><span>简介：</span><?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['description'];?>
+</p>
+	    	<p>由<a href=""><?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['author'];?>
+</a>投稿于
+	    		<span class="time"><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['addtime'],"%Y-%m-%d %H:%M:%S");?>
+</span>
 				</p>
 				<hr>
 			</div>
-
-			<div class="audience-result">
-	    	<a href="">
-	    		<img src="../assets/img/anime/img3.png" alt="" class="img-rounded">
-	    		<span>动画2</span>
-	    	</a>
-	    	<p><span>简介：</span>233333333333333333333333333333333333</p>
-	    	<p>由<a href="">月落丶音阑</a>投稿于
-	    		<span class="time">2015-02-22 22:11:43</span>
-				</p>
-				<hr>
-			</div>
-
-			<div class="audience-result">
-	    	<a href="">
-	    		<img src="../assets/img/anime/img4.png" alt="" class="img-rounded">
-	    		<span>动画3</span>
-	    	</a>
-	    	<p><span>简介：</span>6666666666666666666666666666</p>
-	    	<p>由<a href="">月落丶音阑</a>投稿于
-	    		<span class="time">2015-02-22 22:11:43</span>
-				</p>
-				<hr>
-			</div>
-
+		<?php endfor; endif; ?>
 		</div>
 	</div>
 

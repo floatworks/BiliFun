@@ -21,6 +21,7 @@ $spConfig = array(
 			'right_delimiter' => '}>',
 			'allow_php_tag' => true,
 		),
+		'debugging' => TRUE,
 	),
 	'launch' => array(
 		/* 路由前执行点 */
@@ -34,6 +35,7 @@ $spConfig = array(
 			'sep' => '/',
 			'map' => array(
 				'v' => 'main@prod',
+				'imgvc' => 'main@imgvc',
 			),
 			'args' => array(
 				'v' => array('pid', 'id'),

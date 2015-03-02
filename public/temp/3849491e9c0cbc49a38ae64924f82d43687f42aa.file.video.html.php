@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 01:12:56
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 06:53:19
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/video.html" */ ?>
-<?php /*%%SmartyHeaderCode:9624346754f49a18045309-85838061%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:116083645754f4e9df7398e9-27905546%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3849491e9c0cbc49a38ae64924f82d43687f42aa' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/video.html',
-      1 => 1425316374,
+      1 => 1425336797,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9624346754f49a18045309-85838061',
+  'nocache_hash' => '116083645754f4e9df7398e9-27905546',
   'function' => 
   array (
   ),
@@ -57,17 +57,47 @@ $_smarty_tpl->decodeProperties(array (
 
 		<!-- 播放器 -->
 		<div class="video">
-			<video src="../public/video/【kwaimay】你所停驻的季节.mp4" class="my-video" controls="controls">
-				您的浏览器不支持 video 标签。
-			</video>
-			<!-- 弹幕 -->
-			<div class="barrage">
-				<marquee behavior="slide" direction="left">233333333333</marquee>
-				<marquee behavior="slide" direction="left">hhhhhhhhhhhh</marquee>
-			</div>
-			<input type="text" class="my-input" placeholder="此处填装弹幕">
-			<button type="submit" class="btn shoot">发射！</button>
-		</div>
+			<div class="container-1">
+	        <div class="container-left" id="danmaku-display">
+	            <video id="video-main" src="<?php echo $_smarty_tpl->getVariable('__VIDEO')->value;?>
+/<?php echo $_smarty_tpl->getVariable('prow')->value['url'];?>
+" type="video/mp4" controls>
+	                Your browser dosen't support HTML5 Video
+	            </video>
+	            <div class="container-bottom">
+	                <div class="video-bottom-left">梦想+∞</div>
+	                <input type="text" placeholder=" 此处填充弹幕..." />
+	                <input type="button" value="发射!">
+	            </div>
+	        </div>
+	        <div class="container-right">
+	            <div class="right-top">
+	                <div class="right-top-left">
+	                    <span>弹幕:233</span>
+	                    <br/><span>观众:23333</span>
+	                    <br/><span>播放:233</span>
+	                </div>
+	                <div class="right-top-right">
+	                    <span>预留地</span>
+	                </div>
+	            </div>
+	            <div class="right-bottom">
+	                <div class="right-bottom-top">
+	                    <ul>
+	                        <li id="video-time">时间</li>
+	                        <li id="comment">评论</li>
+	                        <li id="send-time">发送时间</li>
+	                    </ul>
+	                </div>
+	                <div class="right-bottom-list">
+	                    <table class="danmaku-table">
+	                        
+	                    </table>
+	                </div>
+	            </div>
+	        </div>
+   	 	</div>
+	</div>
 
 		<!-- 标签 -->
 		<div class="video-tag">
@@ -158,31 +188,6 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['bfc']['last']       = ($_sma
 	
 	<?php $_template = new Smarty_Internal_Template("footer.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
-
-<script type="text/javascript">
-  
-  var heitan = {};
-  heitan.y_pos = 300;
-  heitan.content = "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
-  Barrage.bullet.launch(heitan, "");
- 
-  var heitan = {};
-  heitan.y_pos = 350;
-  heitan.content = "卧槽";
-  Barrage.bullet.launch(heitan, "");
- 
-  var heitan = {};
-  heitan.y_pos = 150;
-  heitan.content = "3333!";
-  Barrage.bullet.launch(heitan, "");
- 
-  var heitan = {};
-  heitan.y_pos = 20;
-  heitan.content = "44444!!!!";
-  Barrage.bullet.launch(heitan, "");
-
-</script>
-
 
 </body>
 </html>

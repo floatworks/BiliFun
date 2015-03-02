@@ -7,15 +7,15 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
-          <form class="navbar-form navbar-left" role="search">
+          <form class="navbar-form navbar-left" role="search" action="<{spUrl c=search a=show}>" method="get">
             <div class="form-group">
-              <input type="text" placeholder="夢" id="form-bg" class="form-control" />
+              <input name="comfirm_words" type="text" placeholder="夢" id="form-bg" class="form-control" />
             </div>
-            <button type="submit" class="btn"><a href="<{spUrl c=search a=show}>">寻 夢</a></button>
+            <button type="submit" class="btn">寻 夢</button>
           </form>
           <!--  -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="my-nav1" href="#">登录</a></li>
+            <li><a id="my-nav1" class="my-login" href="#login-box">登录</a></li>
             <li><a id="my-nav2" href="#">投稿</a></li>
             <li><a id="my-nav3" href="#">收藏</a></li>
           </ul>

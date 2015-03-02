@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-02 20:36:45
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 06:46:09
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/header.html" */ ?>
-<?php /*%%SmartyHeaderCode:209516295554f21abb990cc6-77137116%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:163283577554f4e8318388d7-40821526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '57ed5a72b6ecd811a1aacfc32b7ef0339c4cdbd5' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/header.html',
-      1 => 1425299625,
+      1 => 1425336366,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '209516295554f21abb990cc6-77137116',
+  'nocache_hash' => '163283577554f4e8318388d7-40821526',
   'function' => 
   array (
   ),
@@ -31,19 +31,11 @@ $_smarty_tpl->decodeProperties(array (
 /css/something.css">
 <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /css/base.css">
-<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/css/video.css">
-<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/css/individualcenter.css">
-<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/css/search.css">
-
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/something.js"></script>
-<script type='text/javascript' src='<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/js/jquery.particleground.min.js'></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/lightchange.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
@@ -51,8 +43,4 @@ $_smarty_tpl->decodeProperties(array (
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/scrollspy.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/js/video.js"></script>
-<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /js/jquery.scrollto.js"></script>
-<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/js/individualcenter.js"></script>

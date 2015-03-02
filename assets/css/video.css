@@ -1,6 +1,6 @@
 @font-face{
 	font-family: "loveletter";
-	scr:url('../fonts/MFQingShu_Noncommercial-Regular.otf')format('opentype');
+	scr:url('font/MFQingShu_Noncommercial-Regular.otf')format('opentype');
 }
 div:before, div:after {
   content: " ";
@@ -69,6 +69,10 @@ a:hover {
 /* main */
 .my-content{
 	margin-top: 100px;
+	padding-right:100px;
+	padding-left:100px;
+	margin-right:auto;
+	margin-left:auto
 }
 
 /* 播放 */
@@ -78,6 +82,7 @@ a:hover {
 	margin-left: 10%;
 	border: #888 1px solid;
 	border-radius: 10px;
+	box-shadow: 2px 2px 3px #aaaaaa;	
 }
 .video-tag{
 	padding: 5px 0px 0px 10px;
@@ -85,6 +90,7 @@ a:hover {
 	background: #fff;
 	border: #999 1px solid;
 	border-radius: 5px;
+	box-shadow: 2px 2px 3px #aaaaaa;
 }
 .my-input{
 	border: #444 1px solid;
@@ -99,6 +105,14 @@ a:hover {
 	background: #777;
 }
 
+/* 弹幕画布 */
+#danmaku{
+	background: none;
+	position: absolute;
+	width: 68%;
+	margin-top: 256px;
+	margin-left: 16%;
+}
 
 
 /* 评论 */
@@ -112,4 +126,7 @@ a:hover {
   padding: 5px 15px 0px;
   white-space: normal;
   word-wrap: break-word;
+}
+.panel{
+	box-shadow:2px 2px 3px #aaaaaa;
 }

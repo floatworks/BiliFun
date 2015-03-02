@@ -99,6 +99,9 @@ body {
 	background: none;
 	color: #E19B91;
 }
+.jumbotron{
+	background: #fff !important;
+}
 #my-swap1{
 	vertical-align: middle;
 	display: block;
@@ -109,7 +112,7 @@ body {
 	color: #669;
 }
 #my-swap3{
-	margin-top: 100px;
+	margin-top: 200px;
 }
 #id-Irvin:hover,#id-Demone:hover{
 	border: 1px #6cf solid;
@@ -168,40 +171,39 @@ body {
 	z-index: 3;
 	background: none;
 }
-#my-anime,#my-music{
+#my-anime,#my-music,#my-entertainment,#my-technology{
 	float: left;
-}
-#my-entertainment,#my-technology{
-	float: left;
+
 }
 #my-anime{
 	background-image: url(../img/pink.jpg);
+	cursor:pointer;
 }
 #my-music{
 	background-image: url(../img/rainy.jpg);
+	cursor:pointer;
 }
 #my-entertainment{
 	background-image: url(../img/water.jpg);
+	cursor:pointer;
 }
 #my-technology{
 	background-image: url(../img/storm.jpg);
+	cursor:pointer;
 }
 .my-content{
 	float: left;
 	height: 700px;
-	padding: 0px 6.1% 0px 6.1%;
 }
-.row-1{
-	padding-top: 40px;
-	padding-bottom: 40px;
+.video-pic-box{
+	overflow-x: hidden;
 }
-.row-2{
+.video-pic{
+	width: 175px;
 	padding-top: 40px;
+	margin-left: 74px;
 	padding-bottom: 40px;
-}
-.row-3{
-	padding-top: 40px;
-	padding-bottom: 40px;
+	float: left;
 }
 .pic-hover{
 	display: none !important;
@@ -220,29 +222,34 @@ body {
 /*content*/
 #anime-content{
 	display: block;
-	background-image: url(../img/bg/anime.png);
+	background: #eee;
+	width: 539.5px;
 }
 #music-content{
 	display: none;
-	background-image: url(../img/bg/music.jpg);
+	background: #eee;
+	width: 539.5px;
 }
 #entertainment-content{
 	display: none;
-	background-image: url(../img/bg/entertainment.jpg);
+	background: #eee;
+	width: 539.5px;
 }
 #technology-content{
 	display: none;
-	background-image: url(../img/bg/technology.png);
+	background: #eee;
+	width: 539.5px;
 }
 
 /*footer*/
 #my-footer{	
-	padding-top: 750px;
+	height: 200px;
+	padding-top: 100px;
 	padding-bottom: 100px;
-	color: #B5DFF2;
-	background: url(../img/bg/1467757.jpg);
-	background-size: cover;
+	color: #8C657C;
+	background: #fff;
+		clear: both;
 }
 #my-footer a{
-	color: #B5DFF2;
+	color: #8C657C;
 }

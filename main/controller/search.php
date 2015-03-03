@@ -39,6 +39,7 @@ class search extends base {
 					}
 				}
 			}
+			$this->display('search.html');
 		}
 	}
 }

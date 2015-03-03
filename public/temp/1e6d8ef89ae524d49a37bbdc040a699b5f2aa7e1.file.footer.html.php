@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 07:38:02
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 13:04:13
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/footer.html" */ ?>
-<?php /*%%SmartyHeaderCode:17469137054f4f45a8b17f5-26567866%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:122900212654f540cdb77ce3-81541759%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1e6d8ef89ae524d49a37bbdc040a699b5f2aa7e1' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/footer.html',
-      1 => 1425339480,
+      1 => 1425359051,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17469137054f4f45a8b17f5-26567866',
+  'nocache_hash' => '122900212654f540cdb77ce3-81541759',
   'function' => 
   array (
   ),
@@ -44,7 +44,7 @@ $_smarty_tpl->decodeProperties(array (
         <button class="btn login-btn">立即注册</button>
       </div>
       <div class="box-side">
-      <form role="login" action="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'user','a'=>'login'),$_smarty_tpl);?>
+      <form role="login" action="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'login','a'=>'index'),$_smarty_tpl);?>
 " method="post">
         <input name="username" type="text" placeholder=" 账号" class=""><p></p>
         <input name="password" type="text" placeholder=" 密码" class=""><p></p>

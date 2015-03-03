@@ -62,7 +62,7 @@
 
 
     var obj = JSON.parse(danmaku);
-    var _video = document.getElementById('video-main');
+    var _video = document.getElementById("video-main");
 
     _video.addEventListener("play", function() {
 
@@ -71,16 +71,17 @@
           var _video = document.getElementById('video-main');
           // console.log(Math.round(_video.currentTime));
           // console.log(obj.danmaku[i].time);
-          if (_video.paused) break;
-          if (Math.round(_video.currentTime) == obj.danmaku[i].time) {
+          if (_video.paused) { 
+            break;
+          }
+          if (_time = Math.round(_video.currentTime) == obj.danmaku[i].time) {
 
             // var launch = function() {
-            // _font_size = obj.danmaku[i].font_size || random_render(Barrage.config.font_size);
-            // _font_family = obj.danmaku[i].font_family || random_render(Barrage.config.font_family);
+            _font_size = obj.danmaku[i].font_size || random_render(Barrage.config.font_size);
+            _font_family = obj.danmaku[i].font_family || random_render(Barrage.config.font_family);
             // _color = obj.danmaku[i].color || random_render(Barrage.config.color);
             // _speed = obj.danmaku[i].speed || random_render(Barrage.config.speed);
             _y_pos = random_render(Barrage.config.top);
-            console.log(obj.danmaku[i].content);
             if (!obj.danmaku[i].content) return;
 
             var words = Barrage.$("<p>" + obj.danmaku[i].content + "</p>");
@@ -104,7 +105,12 @@
           }
         }
       }, 1000);
-    });
+    }, false);
+
+  _video.addEventListener("paused", function() {
+    clearInterval(_time);
+    _time = 0;
+  }, false);
 
 
     return {

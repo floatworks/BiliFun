@@ -25,7 +25,7 @@ $spConfig = array(
 	),
 	'launch' => array(
 		/* 路由前执行点 */
-		'router_prefilter' => array(array('spUrlRewrite','setRewrite')),
+		'router_prefilter' => array(array('spUrlRewrite','setRewrite'), array('spAcl','mincheck'),),
 		'function_url' => array(array('spUrlRewrite','getRewrite')),
 	),
 	/* 伪静态 */
@@ -35,10 +35,12 @@ $spConfig = array(
 			'sep' => '/',
 			'map' => array(
 				'v' => 'main@prod',
+				// 'user' => 'user@index',
 				'imgvc' => 'main@imgvc',
 			),
 			'args' => array(
 				'v' => array('pid', 'id'),
+				// 'user' => array('user_id'),
 				'pages' => array('id'),
 			)
 		)

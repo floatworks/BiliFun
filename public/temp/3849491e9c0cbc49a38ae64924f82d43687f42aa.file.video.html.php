@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 06:53:19
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 15:02:42
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/video.html" */ ?>
-<?php /*%%SmartyHeaderCode:116083645754f4e9df7398e9-27905546%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:127266502254f55c92eb9bf3-08749686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3849491e9c0cbc49a38ae64924f82d43687f42aa' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/video.html',
-      1 => 1425336797,
+      1 => 1425366160,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '116083645754f4e9df7398e9-27905546',
+  'nocache_hash' => '127266502254f55c92eb9bf3-08749686',
   'function' => 
   array (
   ),
@@ -22,8 +22,6 @@ $_smarty_tpl->decodeProperties(array (
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
 <link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
 /css/video.css">
-<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
-/js/barrage.js"></script>
 <title><?php echo $_smarty_tpl->getVariable('prow')->value['video_name'];?>
 </title>
 </head>
@@ -61,7 +59,7 @@ $_smarty_tpl->decodeProperties(array (
 	        <div class="container-left" id="danmaku-display">
 	            <video id="video-main" src="<?php echo $_smarty_tpl->getVariable('__VIDEO')->value;?>
 /<?php echo $_smarty_tpl->getVariable('prow')->value['url'];?>
-" type="video/mp4" controls>
+" type="video/mp4" controls="controls">
 	                Your browser dosen't support HTML5 Video
 	            </video>
 	            <div class="container-bottom">
@@ -188,6 +186,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['bfc']['last']       = ($_sma
 	
 	<?php $_template = new Smarty_Internal_Template("footer.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
-
+<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/js/barrage.js"></script>
 </body>
 </html>

@@ -4,6 +4,14 @@ require('base.php');
 
 class user extends base {
 
+	public function __construct() {
+		parent::__construct();
+
+		if (empty($_SESSION['username'])) {
+			$this->jump(spUrl('main', 'index'));
+		}
+	}
+
 	public function index() {
 		$userinfo = $_SESSION['userinfo'];
 		$user_id = $userinfo['user_id'];
@@ -12,7 +20,7 @@ class user extends base {
 		$this->display('usercenter.html');
 	}
 	public function login() {
-		if (!empty($_SESSION['username'])) {
+		if (!empty($_SESSION['userinfo'])) {
 			$this->jump(spUrl('main', 'index'));
 		}
 		if ($username = $this->spArgs('username')) {

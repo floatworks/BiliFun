@@ -1,6 +1,28 @@
-<{include file="header.html"}>
-<link rel="stylesheet" href="<{$__RESOURCE}>/css/individualcenter.css">
-<script type="text/javascript" src="<{$__RESOURCE}>/js/individualcenter.js"></script>
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 13:04:01
+         compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/usercenter.html" */ ?>
+<?php /*%%SmartyHeaderCode:88516316654f540c1eeac70-08041392%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '46e44fda2e0e5c390ec317b460e14e5aa59a8cf8' => 
+    array (
+      0 => '/Users/Haku/Documents/Github/BiliFun/tpl/usercenter.html',
+      1 => 1425358860,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '88516316654f540c1eeac70-08041392',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
+<?php $_template = new Smarty_Internal_Template("header.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/css/individualcenter.css">
+<script type="text/javascript" src="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/js/individualcenter.js"></script>
 <title>夢の源</title>
 </head>
 <body style="overflow: hidden;">
@@ -203,7 +225,8 @@
 
 
 
-			<{include file="footer.html"}>
+			<?php $_template = new Smarty_Internal_Template("footer.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
 
 		</div>
 		</div>

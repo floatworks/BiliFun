@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 05:11:03
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 09:08:12
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/search.html" */ ?>
-<?php /*%%SmartyHeaderCode:12787841554f4d1e758a755-39375434%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:184231860954f5097ca2da99-05724739%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '18029b273f4835e653e9cfe770d68444d124b6a1' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/search.html',
-      1 => 1425330661,
+      1 => 1425344891,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12787841554f4d1e758a755-39375434',
+  'nocache_hash' => '184231860954f5097ca2da99-05724739',
   'function' => 
   array (
   ),
@@ -21,6 +21,8 @@ $_smarty_tpl->decodeProperties(array (
 ?><?php $_template = new Smarty_Internal_Template("header.html", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
 <title>搜索页-</title>
+<link rel="stylesheet" href="<?php echo $_smarty_tpl->getVariable('__RESOURCE')->value;?>
+/css/search.css">
 </head>
 <body>
 	<header id="my-header">
@@ -36,7 +38,7 @@ $_smarty_tpl->decodeProperties(array (
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="my-nav1" href="#"> 登录</a></li>
+			<li><a id="my-nav1" class="my-login" href="#login-box">登录</a></li>
             <li><a id="my-nav2" href="#"> 投稿</a></li>
             <li><a id="my-nav3" href="#"> 收藏</a></li>
           </ul>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 06:46:09
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-05 07:13:01
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/header.html" */ ?>
-<?php /*%%SmartyHeaderCode:163283577554f4e8318388d7-40821526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:133576030654f7917d92c087-46395486%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '57ed5a72b6ecd811a1aacfc32b7ef0339c4cdbd5' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/header.html',
-      1 => 1425336366,
+      1 => 1425510761,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '163283577554f4e8318388d7-40821526',
+  'nocache_hash' => '133576030654f7917d92c087-46395486',
   'function' => 
   array (
   ),

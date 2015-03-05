@@ -6,6 +6,18 @@ class base extends spController {
 	public function __construct() {
 		parent::__construct();
 
+		$server = array('127.0.0.1');
+		if (!in_array($_SERVER['SERVER_ADDR'], $server)) {
+			exit('Server - Access Denied');
+		}
+
+		$domain = array('localhost');
+		$billfun = isset($_SERVER['HTTP_X_FORWARDED_HOST']) ? $_SERVER['HTTP_X_FORWARDED_HOST'] : (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'].($SERVER['SERVER_PORT'] == 80 ? '' : ':' . $_SERVER['SERVER_PORT']));
+
+		if (!in_array($billfun, $domain)) {
+			exit('Domain - Access Denied');
+		}
+
 		$this->conf = $conf = spClass('m_siteConfig')->find();
 
 		if ($conf['close']) {

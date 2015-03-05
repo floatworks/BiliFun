@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 13:04:01
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-05 07:17:07
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/usercenter.html" */ ?>
-<?php /*%%SmartyHeaderCode:88516316654f540c1eeac70-08041392%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:65635658054f79273810167-03462896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '46e44fda2e0e5c390ec317b460e14e5aa59a8cf8' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/usercenter.html',
-      1 => 1425358860,
+      1 => 1425511003,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '88516316654f540c1eeac70-08041392',
+  'nocache_hash' => '65635658054f79273810167-03462896',
   'function' => 
   array (
   ),
@@ -35,9 +35,9 @@ $_smarty_tpl->decodeProperties(array (
 		<!-- left -->
 		<div class="left-blur"></div>
 		<div id="center-left" class="affix">
-			<a href="#"><img id="i-img" src="img/b.png" class="img-circle" title="点我更改头像"></a>
+			<a href="#"><img id="i-img" class="img-circle" title="点我更改头像"></a>
 			<a href="#"><p id="i-name">月落丶音阑</p></a>
-			<ul id="left-content" class="text-center">
+			<ul id="left-content" class="text-center" style="background: none;">
 				<li></li>
 				<li><a href="#i-1"><p id="i-homepage" onmouseover="change1()" onmouseout="change11()">--主页--</p></a></li>
 				<li><a href="#i-2"><p id="i-submission" onmouseover="change2()" onmouseout="change12()">--视频--</p></a>

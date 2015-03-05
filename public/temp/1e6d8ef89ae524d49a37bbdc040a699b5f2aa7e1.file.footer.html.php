@@ -1,24 +1,24 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 13:04:13
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-05 16:17:43
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/footer.html" */ ?>
-<?php /*%%SmartyHeaderCode:122900212654f540cdb77ce3-81541759%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:7961818454f81127139a30-07695454%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1e6d8ef89ae524d49a37bbdc040a699b5f2aa7e1' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/footer.html',
-      1 => 1425359051,
+      1 => 1425543461,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '122900212654f540cdb77ce3-81541759',
+  'nocache_hash' => '7961818454f81127139a30-07695454',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <!-- footer -->
-  <footer>
+  <footer style="background: none;">
     <div id="my-footer">
       <ul class="list-inline text-center">
         <li>当前版本: v3.0.0</li>
@@ -41,7 +41,8 @@ $_smarty_tpl->decodeProperties(array (
       <div class="box-side" style="border-right: 1px #777 solid;">
         <p>还没有账号吗&gt;_ &lt; ?</p>
         <p>快来加入我们吧&gt;w &lt; ~</p>
-        <button class="btn login-btn">立即注册</button>
+        <button class="btn login-btn" onclick="window.location.href='<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'register','a'=>'show'),$_smarty_tpl);?>
+';">立即注册</button>
       </div>
       <div class="box-side">
       <form role="login" action="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'login','a'=>'index'),$_smarty_tpl);?>

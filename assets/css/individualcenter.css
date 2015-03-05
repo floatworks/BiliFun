@@ -28,11 +28,7 @@ a:hover {
 
 /* left */
 .left-blur{
-	position: absolute;
-	/*background: url(../img/bg_dark.png) repeat;
-	z-index: 2;
-	opacity: 0.3;*/
-	
+	position: absolute;	
 	width: 30%;
 	height: 800px;
 	background: url(../img/bg/c5.jpg);	
@@ -48,10 +44,13 @@ a:hover {
 	z-index: 5;
 }
 #i-img{
+	background: url("../img/b.png");
 	float: left;
 	margin-left: 20%;
 	margin-top: 10%;
 	border: 1px #6cf solid;
+	width: 150px;
+	height: 150px
 }
 #i-img:hover{
 	border: 1px #FCD99F solid;
@@ -59,9 +58,10 @@ a:hover {
 #i-name{
 	margin-top: 100px;
 	margin-left: 250px;
+	color: #fff;
 }
 #left-content{
-	margin-top: 80px;
+	margin: 80px auto 0 auto;
 	font-size: 20px;
 	color: #FCD99F;
 }

@@ -13,9 +13,9 @@ class login extends base {
 
 	public function index() {
 		if ($username = $this->spArgs('username')) {
-			$_SESSION['username'] = $username;
-			// $this->jump(spUrl('user', 'login', array('username' => $username, 'password' => $password)));
-			var_dump($_SESSION);
+			$this->username = $username;
+			$this->passwd = $password = $this->spArgs('password');
+			$this->jump(spUrl('user', 'login'));
 		}
 	}
 

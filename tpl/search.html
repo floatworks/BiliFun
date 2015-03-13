@@ -40,6 +40,7 @@
 		<hr>
 
 		<div class="main-result">
+		<{if $result neq ""}>
 		<{section loop=$result name=search}>
 			<div class="audience-result">
 	    	<a href="<{spUrl c=main a=prod pid=$result[search].pid}>">
@@ -47,12 +48,17 @@
 	    		<span><{$result[search].video_name}></span>
 	    	</a>
 	    	<p><span>简介：</span><{$result[search].description}></p>
-	    	<p>由<a href=""><{$result[search].author}></a>投稿于
+	    	<p>由<a href="<{spUrl c=user a=index}>"><{$result[search].author}></a>投稿于
 	    		<span class="time"><{$result[search].addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
 				</p>
 				<hr>
 			</div>
 		<{/section}>
+		<{else}>
+			<div class="audience-result">
+			<p><span>对不起，没有找到与 "<{$search_words}>" </span>相关的信息</p>
+			</div>
+		<{/if}>
 		</div>
 	</div>
 

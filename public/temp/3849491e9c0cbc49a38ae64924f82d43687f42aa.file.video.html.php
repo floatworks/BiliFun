@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 15:02:42
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-14 00:52:53
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/video.html" */ ?>
-<?php /*%%SmartyHeaderCode:127266502254f55c92eb9bf3-08749686%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:861563349550315e593c979-89032364%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '3849491e9c0cbc49a38ae64924f82d43687f42aa' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/video.html',
-      1 => 1425366160,
+      1 => 1426265571,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '127266502254f55c92eb9bf3-08749686',
+  'nocache_hash' => '861563349550315e593c979-89032364',
   'function' => 
   array (
   ),
@@ -34,6 +34,8 @@ $_smarty_tpl->decodeProperties(array (
 
 	<!-- 弹幕画布 -->
 	<div id="danmaku"></div>
+	<!-- 遮挡布面 -->
+	<div id="occlusion"></div>
 
 	<!-- main -->
 	<div class="myvideo-content">
@@ -64,7 +66,7 @@ $_smarty_tpl->decodeProperties(array (
 	            </video>
 	            <div class="container-bottom">
 	                <div class="video-bottom-left">梦想+∞</div>
-	                <input type="text" placeholder=" 此处填充弹幕..." />
+	                <input id="bullet-input" type="text" placeholder=" 此处填充弹幕..." />
 	                <input type="button" value="发射!">
 	            </div>
 	        </div>
@@ -82,14 +84,64 @@ $_smarty_tpl->decodeProperties(array (
 	            <div class="right-bottom">
 	                <div class="right-bottom-top">
 	                    <ul>
-	                        <li id="video-time">时间</li>
+	                        <li id="video-time">编号</li>
 	                        <li id="comment">评论</li>
 	                        <li id="send-time">发送时间</li>
 	                    </ul>
 	                </div>
 	                <div class="right-bottom-list">
 	                    <table class="danmaku-table">
-	                        
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">1</td>
+	                       	<td class="danmaku-comment">hhh</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">2</td>
+	                       	<td class="danmaku-comment">233</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">3</td>
+	                       	<td class="danmaku-comment">yes</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">4</td>
+	                       	<td class="danmaku-comment">nice</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">5</td>
+	                       	<td class="danmaku-comment">ok~</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">6</td>
+	                       	<td class="danmaku-comment">666</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">7</td>
+	                       	<td class="danmaku-comment">bye~</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">8</td>
+	                       	<td class="danmaku-comment">thanks</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">9</td>
+	                       	<td class="danmaku-comment">woooo</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">10</td>
+	                       	<td class="danmaku-comment">yooooo~</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+
 	                    </table>
 	                </div>
 	            </div>
@@ -134,7 +186,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['bft']['last']       = ($_sma
 		<!-- 评论区 -->
 		<div>
 			<p>说两句呗~o(*￣▽￣*)ブ</p>
-			<form class="say-form">
+			<form class="say-form" action="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'comment','a'=>'add'),$_smarty_tpl);?>
+" method="GET">
 				<textarea class="form-control" rows="4" name="message"></textarea>
 				<button type="submit" class="btn btn-primary"> 发表评论 </button>
 			</form>
@@ -173,9 +226,10 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['bfc']['last']       = ($_sma
 </a>
 	    		<span class="time"><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('comment')->value[$_smarty_tpl->getVariable('smarty')->value['section']['bfc']['index']]['addtime'],"%Y-%m-%d %H:%M:%S");?>
 </span>
-	    		<span><a class="btn-quote">[回复]</a></span>
+	    		<span><a class="btn-quote" href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'comment','a'=>'add'),$_smarty_tpl);?>
+">[回复]</a></span>
 		    	<div class="comment-content">
-		    		<p><?php echo $_smarty_tpl->getVariable('comment')->value[$_smarty_tpl->getVariable('smarty')->value['section']['bfc']['index']]['contents'];?>
+		    		<p><?php echo $_smarty_tpl->getVariable('comment')->value[$_smarty_tpl->getVariable('smarty')->value['section']['bfc']['index']]['message'];?>
 <p>
 		    	</div>
 		    	<?php endfor; endif; ?>

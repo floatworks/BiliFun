@@ -133,7 +133,7 @@ a:hover {
 .right-top-right{
 	float: left;
 	padding: 5px;
-	height: 64px;
+	height: 64px; 
 }
 
 .right-bottom{
@@ -156,10 +156,10 @@ a:hover {
 	width: 300px;
 	margin-top: -2px;
 	height: 24px;
-	overflow-y:auto;
+	overflow-y: scroll;
 }
 
-.danmaku-vtime{
+.danmaku-num{
 	padding-left: 4px;
 	width: 50px;
 	color: rgb(0,0,0);
@@ -218,9 +218,11 @@ a:hover {
 }
 
 .right-bottom-list{
-	height: 93.72197%;
+	height: 93.722%;
 	width: 296px;
-	background: rgb(255,255,255);
+	background: none repeat scroll 0% 0% #FFF;
+	overflow: auto;
+	position: relative;
 }
 
 .my-video{
@@ -263,14 +265,14 @@ a:hover {
 	background: #777;
 }
 
-
-/* 弹幕画布 */
-#danmaku{
-	background: none;
+/* 弹幕遮挡 */
+#occlusion{
+	background: #FAFAFA;
 	position: absolute;
-	width: 680px;
+	width: 100px;
+	height: 680px;
 	margin-top: 200px;
-	margin-left: 100px;
+	margin-left: 0px;
 }
 
 

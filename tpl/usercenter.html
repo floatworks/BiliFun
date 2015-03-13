@@ -1,6 +1,5 @@
+<?php  include"getMessage.php"; ?>
 <{include file="header.html"}>
-<link rel="stylesheet" href="<{$__RESOURCE}>/css/individualcenter.css">
-<script type="text/javascript" src="<{$__RESOURCE}>/js/individualcenter.js"></script>
 <title>夢の源</title>
 </head>
 <body style="overflow: hidden;">
@@ -13,9 +12,9 @@
 		<!-- left -->
 		<div class="left-blur"></div>
 		<div id="center-left" class="affix">
-			<a href="#"><img id="i-img" class="img-circle" title="点我更改头像"></a>
+			<a href="#"><img id="i-img" src="../assets/img/b.png" class="img-circle" title="点我更改头像"></a>
 			<a href="#"><p id="i-name">月落丶音阑</p></a>
-			<ul id="left-content" class="text-center" style="background: none;">
+			<ul id="left-content" class="text-center">
 				<li></li>
 				<li><a href="#i-1"><p id="i-homepage" onmouseover="change1()" onmouseout="change11()">--主页--</p></a></li>
 				<li><a href="#i-2"><p id="i-submission" onmouseover="change2()" onmouseout="change12()">--视频--</p></a>
@@ -33,7 +32,7 @@
 		
 		<!-- right -->
 		<div class="my-box">
-		<div id="left-content">
+		<div id="right-content">
 
 			<!-- 1 -->
 			<div id="i-1">
@@ -111,9 +110,10 @@
 					<h4 class="my-tag h4-color">丨上传丨</h4>
 					<form class="navbar-form my-form" role="search">
 						<p>视频源地址：</p>
-            <input type="text" placeholder="在此填写视频源地址" class="form-control" />            
-            <button type="submit" class="btn">下一步</button>
-          </form>
+			            <input type="text" placeholder="在此填写视频源地址" class="form-control" />            
+			            <button type="submit" class="btn">下一步</button>
+			        </form>
+			        <button class="btn to-upload">直接上传</button>
 				</div>
 
 				<!-- 管理 -->
@@ -196,12 +196,6 @@
 				</div>
 
 			</div>
-
-
-
-			
-
-
 
 			<{include file="footer.html"}>
 

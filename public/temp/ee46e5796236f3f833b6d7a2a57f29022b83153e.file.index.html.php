@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 00:50:26
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-14 00:27:22
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:126829947754f494d2c0f0a9-14142282%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:145351500455030fea5edc62-86690604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee46e5796236f3f833b6d7a2a57f29022b83153e' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/index.html',
-      1 => 1425315000,
+      1 => 1425619742,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '126829947754f494d2c0f0a9-14142282',
+  'nocache_hash' => '145351500455030fea5edc62-86690604',
   'function' => 
   array (
   ),
@@ -176,6 +176,7 @@ if ($_smarty_tpl->_count($_from) > 0){
     target: '.my-navbar'
   });
 </script>
+
 
 </body>
 </html>

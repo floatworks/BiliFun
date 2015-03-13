@@ -7,18 +7,13 @@ class m_comment extends spModel {
 
 	var $verifier = array(
 		"rules" => array(
-			'replyer' => array(
-				'notnull' => true,
-				'minlength' => 2,
-				'maxlength' => 20,
-			),
-			'contents' => array(
-				'notnull' => true,
+			'message' => array(
+				'notnull' => TRUE,
 				'minlength' => 15,
 			),
 		),
 		"messages" => array(
-			'contents' => array(
+			'message' => array(
 				'minlength' => "回复留言请勿低于十五字之下.",
 			),
 		),
@@ -37,9 +32,11 @@ class m_comment extends spModel {
 
 	// 覆写CREATE
 	public function create($new) {
-		$new = array_merge($new, array(
-			'addtime' => date("Y-m-d H:i:s")
-		));
-		parent::create($new);
+		$t = date("Y-m-d H:i:s", time());
+		$arr = array(
+			'addtime' => $t
+		);
+		$newArr = array_merge_recursive($new, $arr);
+		return parent::create($newArr);
 	}
 }

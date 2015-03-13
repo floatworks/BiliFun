@@ -8,12 +8,12 @@ class m_user extends spModel {
 	var $verifier = array(
 		"rules" => array(
 			'username' => array(
-				'notnull' => true,
+				'notnull' => TRUE,
 				'minlength' => 2,
 				'maxlength' => 20,
 			),
 			'password' => array(
-				'notnull' => true,
+				'notnull' => TRUE,
 				'minlength' => 6,
 				'maxlength' => 30,
 		    ),

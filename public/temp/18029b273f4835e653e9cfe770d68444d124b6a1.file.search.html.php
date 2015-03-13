@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.8, created on 2015-03-03 09:08:12
+<?php /* Smarty version Smarty-3.0.8, created on 2015-03-14 01:29:22
          compiled from "/Users/Haku/Documents/Github/BiliFun/tpl/search.html" */ ?>
-<?php /*%%SmartyHeaderCode:184231860954f5097ca2da99-05724739%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:205897499255031e72678921-70647800%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '18029b273f4835e653e9cfe770d68444d124b6a1' => 
     array (
       0 => '/Users/Haku/Documents/Github/BiliFun/tpl/search.html',
-      1 => 1425344891,
+      1 => 1426267755,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '184231860954f5097ca2da99-05724739',
+  'nocache_hash' => '205897499255031e72678921-70647800',
   'function' => 
   array (
   ),
@@ -67,6 +67,7 @@ $_smarty_tpl->decodeProperties(array (
 		<hr>
 
 		<div class="main-result">
+		<?php if ($_smarty_tpl->getVariable('result')->value!=''){?>
 		<?php unset($_smarty_tpl->tpl_vars['smarty']->value['section']['search']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['loop'] = is_array($_loop=$_smarty_tpl->getVariable('result')->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['name'] = 'search';
@@ -103,7 +104,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['last']       = ($_
 	    	</a>
 	    	<p><span>简介：</span><?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['description'];?>
 </p>
-	    	<p>由<a href=""><?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['author'];?>
+	    	<p>由<a href="<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['spUrl'][0][0]->__template_spUrl(array('c'=>'user','a'=>'index'),$_smarty_tpl);?>
+"><?php echo $_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['author'];?>
 </a>投稿于
 	    		<span class="time"><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('result')->value[$_smarty_tpl->getVariable('smarty')->value['section']['search']['index']]['addtime'],"%Y-%m-%d %H:%M:%S");?>
 </span>
@@ -111,6 +113,12 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['search']['last']       = ($_
 				<hr>
 			</div>
 		<?php endfor; endif; ?>
+		<?php }else{ ?>
+			<div class="audience-result">
+			<p><span>对不起，没有找到与 "<?php echo $_smarty_tpl->getVariable('search_words')->value;?>
+" </span>相关的信息</p>
+			</div>
+		<?php }?>
 		</div>
 	</div>
 

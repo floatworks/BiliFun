@@ -11,7 +11,7 @@
  Target Server Version : 50538
  File Encoding         : utf-8
 
- Date: 03/03/2015 22:37:04 PM
+ Date: 03/14/2015 01:41:16 AM
 */
 
 SET NAMES utf8;
@@ -44,7 +44,7 @@ COMMIT;
 DROP TABLE IF EXISTS `bf_comment`;
 CREATE TABLE `bf_comment` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `contents` varchar(250) NOT NULL,
+  `message` varchar(250) NOT NULL,
   `replyer` varchar(20) NOT NULL,
   `author_id` int(10) NOT NULL,
   `addtime` int(10) NOT NULL,
@@ -52,13 +52,13 @@ CREATE TABLE `bf_comment` (
   `reply_num` int(10) unsigned NOT NULL DEFAULT '0',
   `pid` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Records of `bf_comment`
 -- ----------------------------
 BEGIN;
-INSERT INTO `bf_comment` VALUES ('1', '沙发~~~~~~~~~~~~~~~和', '月落丶音阑', '1', '1242424', '1', '0', 'av2432342'), ('2', '测试评论测试评论测试评论测试评论', 'Irvin Aexcm', '1', '12321321', '2', '0', 'av234233');
+INSERT INTO `bf_comment` VALUES ('1', '沙发~~~~~~~~~~~~~~~和', '月落丶音阑', '1', '1242424', '1', '0', 'av2432342'), ('2', '测试评论测试评论测试评论测试评论', 'Irvin Aexcm', '1', '12321321', '2', '0', 'av234233'), ('3', '暗示法收费方式多福多寿佛挡杀佛', '', '0', '2015', '0', '0', ''), ('4', '这是一个测试数据，测试评论是否成功', '', '0', '2015', '0', '0', ''), ('5', '这是一个测试数据，测试评论是否成功', '', '0', '2015', '0', '0', 'av2432342'), ('6', '这是一个测试数据，测试评论是否成功', '', '1', '2015', '0', '0', 'av2432342'), ('7', '这是一个测试数据，测试评论是否成功', '游客', '1', '2015', '0', '0', 'av2432342');
 COMMIT;
 
 -- ----------------------------
@@ -132,7 +132,7 @@ CREATE TABLE `bf_prod` (
 --  Records of `bf_prod`
 -- ----------------------------
 BEGIN;
-INSERT INTO `bf_prod` VALUES ('1', 'av2432342', '...', 'Admin', '1', 'anime', '4', '1', 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh', '1231232', '1', '1', 'img/anime/img1.png', '思修活动-3.mp4', '26'), ('2', 'av234233', '...', 'Admin', '1', 'anime', '4', '2', 'hhhhhhhh', '23234243', '2', '1', 'img/anime/img2.png', '思修活动-3.mp4', '119');
+INSERT INTO `bf_prod` VALUES ('1', 'av2432342', '...', 'Admin', '1', 'anime', '4', '1', 'hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh', '1231232', '1', '1', 'img/anime/img1.png', '思修活动-3.mp4', '107'), ('2', 'av234233', '...', 'Admin', '1', 'anime', '4', '2', 'hhhhhhhh', '23234243', '2', '1', 'img/anime/img2.png', '思修活动-3.mp4', '186');
 COMMIT;
 
 -- ----------------------------

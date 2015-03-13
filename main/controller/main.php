@@ -30,6 +30,7 @@ class main extends base {
 			$prow['photo'] = $thumb['photo'];
 
 			$this->prow = $prow;
+			$_SESSION['pid'] = $prow['pid'];
 			// 访问量+1
 			spClass('m_prod')->query("UPDATE bf_prod SET views = views + 1 WHERE pid = '$pid'");
 			// 上一页，下一页
@@ -37,7 +38,7 @@ class main extends base {
 			$this->next = spClass('m_prod')->find("channel_id='$prow[channel_id]' AND pid < '$pid'", 'pid DESC');
 			// 分类
 			$this->crow = $crow = spClass('m_category')->find(array('cid' => $prow['channel_id']));
-			$this->__PID = $crow['pid'];
+			$this->__CID = $crow['cid'];
 
 			// 标签
 			$this->tags = $tags = spClass('m_tags')->spLinker()->findAll(array('video_id' => $prow['pid']));

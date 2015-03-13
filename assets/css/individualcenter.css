@@ -28,8 +28,12 @@ a:hover {
 
 /* left */
 .left-blur{
-	position: absolute;	
-	width: 30%;
+	position: absolute;
+	/*background: url(../img/bg_dark.png) repeat;
+	z-index: 2;
+	opacity: 0.3;*/
+	
+	width: 400px;
 	height: 800px;
 	background: url(../img/bg/c5.jpg);	
 	-webkit-filter: blur(10px);
@@ -39,29 +43,41 @@ a:hover {
 	filter: blur(10px);
 }
 #center-left{
-	width: 30%;
+	width: 400px;
 	height: 800px;
+	text-align: center;
 	z-index: 5;
 }
 #i-img{
-	background: url("../img/b.png");
 	float: left;
+	width: 140px;
+	height: 140px;
 	margin-left: 20%;
 	margin-top: 10%;
 	border: 1px #6cf solid;
-	width: 150px;
-	height: 150px
+	transition: ease-in-out all .3s;
+	-moz-transition: ease-in-out all .3s;
+	-webkit-transition: ease-in-out all .3s;
 }
 #i-img:hover{
 	border: 1px #FCD99F solid;
 }
 #i-name{
+	color: #6cf;
 	margin-top: 100px;
 	margin-left: 250px;
-	color: #fff;
+	transition: ease-in-out all .3s;
+	-moz-transition: ease-in-out all .3s;
+	-webkit-transition: ease-in-out all .3s;
+}
+#i-name:hover{
+	color: #FCD99F;
 }
 #left-content{
-	margin: 80px auto 0 auto;
+	width: 400px;
+	text-align: center;
+	background: none;
+	margin-top: 80px;
 	font-size: 20px;
 	color: #FCD99F;
 }
@@ -73,10 +89,9 @@ a:hover {
 /* right */
 .my-box{
 	margin-top: -800px;
-	margin-left: 30%;
-	width: 70%;
+	margin-left: 400px;
 	height: 800px;
-	overflow: auto;
+	overflow-x: hidden;
 
 /*	background: url(../img/bg_dark.png) repeat;
 	z-index: 2;
@@ -87,7 +102,12 @@ a:hover {
 	-moz-filter:opacity(.2);
 	-webkit-filter:opacity(.2);*/
 }
-#left-content{
+#right-content{
+	text-align: center;
+	background: none;
+	margin-top: 80px;
+	font-size: 20px;
+	color: #FCD99F;
 	z-index: 10;
 }
 .my-box h3{
@@ -147,14 +167,16 @@ a:hover {
 #i-2-2 p,#i-2-3 p{
 	color: #333;
 }
-
-/*footer*/
-#my-footer{	
-	margin-top: 100px;
-	padding-bottom: 100px;
-	color: #B5DFF2;
-	background: none;
+.to-upload{
+	background: #0077EC;
+	color: #fff;
+	transition: ease-in-out all .3s;
+	-moz-transition: ease-in-out all .3s;
+	-webkit-transition: ease-in-out all .3s;
 }
-#my-footer a{
-	color: #B5DFF2;
+.to-upload:hover{
+	background: #3e1934;
+}
+.to-upload a{
+	color: #fff;
 }

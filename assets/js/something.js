@@ -15,77 +15,108 @@ $(document).ready(function() {
 // });
 
 
+
 // list change
+
 $(document).ready(function() {
 	$("#mylist-anime").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
-			$("#anime-content").css('display', 'none');
+			setTimeout(function(){
+			$("#mylist-music").animate({left:'-300px'},1000);
+			},10);
+			$("#anime-content").fadeOut(1000);
+			setTimeout(function(){
+			$("#mylist-music").animate({left:''},1000);
+			},10);
 		}
-		if ($("#music-content").css('display') == 'block') {
-			$("#music-content").css('display', 'none');
+		else if ($("#music-content").css('display') == 'block') {
+			$("#music-content").fadeOut(1000, function() {
+				$("#anime-content").fadeIn(1000);
+			});
 		}
-		if ($("#entertainment-content").css('display') == 'block') {
-			$("#entertainment-content").css('display', 'none');
+		else if ($("#entertainment-content").css('display') == 'block') {
+			$("#entertainment-content").fadeOut(1000, function() {
+				$("#anime-content").fadeIn(1000);
+			});
 		}
-		if ($("#technology-content").css('display') == 'block') {
-			$("#technology-content").css('display', 'none');
+		else if ($("#technology-content").css('display') == 'block') {
+			$("#technology-content").fadeOut(1000, function() {
+				$("#anime-content").fadeIn(1000);
+			});
 		} else {
-			$("#anime-content").css('display', 'block');
+			$("#anime-content").fadeIn(1000);
 		}
 	});
 });
 $(document).ready(function() {
 	$("#mylist-music").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
-			$("#anime-content").css('display', 'none');
+			$("#anime-content").fadeOut(1000, function() {
+				$("#music-content").fadeIn(1000);
+			});
 		}
-		if ($("#music-content").css('display') == 'block') {
-			$("#music-content").css('display', 'none');
+		else if ($("#music-content").css('display') == 'block') {
+			$("#music-content").fadeOut(1000);
 		}
-		if ($("#entertainment-content").css('display') == 'block') {
-			$("#entertainment-content").css('display', 'none');
+		else if ($("#entertainment-content").css('display') == 'block') {
+			$("#entertainment-content").fadeOut(1000, function() {
+				$("#music-content").fadeIn(1000);
+			});
 		}
-		if ($("#technology-content").css('display') == 'block') {
-			$("#technology-content").css('display', 'none');
+		else if ($("#technology-content").css('display') == 'block') {
+			$("#technology-content").fadeOut(1000, function() {
+				$("#music-content").fadeIn(1000);
+			});
 		} else {
-			$("#music-content").css('display', 'block');
+			$("#music-content").fadeIn(1000);
 		}
 	});
 });
 $(document).ready(function() {
 	$("#mylist-entertainment").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
-			$("#anime-content").css('display', 'none');
+			$("#anime-content").fadeOut(1000, function() {
+				$("#entertainment-content").fadeIn(1000);
+			});
 		}
-		if ($("#music-content").css('display') == 'block') {
-			$("#music-content").css('display', 'none');
+		else if ($("#music-content").css('display') == 'block') {
+			$("#music-content").fadeOut(1000, function() {
+				$("#entertainment-content").fadeIn(1000);
+			});
 		}
-		if ($("#entertainment-content").css('display') == 'block') {
-			$("#entertainment-content").css('display', 'none');
+		else if ($("#entertainment-content").css('display') == 'block') {
+			$("#entertainment-content").fadeOut(1000);
 		}
-		if ($("#technology-content").css('display') == 'block') {
-			$("#technology-content").css('display', 'none');
+		else if ($("#technology-content").css('display') == 'block') {
+			$("#technology-content").fadeOut(1000, function() {
+				$("#entertainment-content").fadeIn(1000);
+			});
 		} else {
-			$("#entertainment-content").css('display', 'block');
+			$("#entertainment-content").fadeIn(1000);
 		}
 	});
 });
 $(document).ready(function() {
 	$("#mylist-technology").click(function() {
 		if ($("#anime-content").css('display') == 'block') {
-			$("#anime-content").css('display', 'none');
+			$("#anime-content").fadeOut(1000, function() {
+				$("#technology-content").fadeIn(1000);
+			});
 		}
-		if ($("#music-content").css('display') == 'block') {
-			$("#music-content").css('display', 'none');
+		else if ($("#music-content").css('display') == 'block') {
+			$("#music-content").fadeOut(1000, function() {
+				$("#technology-content").fadeIn(1000);
+			});
 		}
-		if ($("#entertainment-content").css('display') == 'block') {
-			$("#entertainment-content").css('display', 'none');
+		else if ($("#entertainment-content").css('display') == 'block') {
+			$("#entertainment-content").fadeOut(1000, function() {
+				$("#technology-content").fadeIn(1000);
+			});
 		}
-		if ($("#technology-content").css('display') == 'block') {
-			$("#technology-content").css('display', 'none');
+		else if ($("#technology-content").css('display') == 'block') {
+			$("#technology-content").fadeOut(1000);
 		} else {
-			$("#technology-content").css('display', 'block');
+			$("#technology-content").fadeIn(1000);
 		}
 	});
 });
-

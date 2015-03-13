@@ -10,6 +10,8 @@
 
 	<!-- 弹幕画布 -->
 	<div id="danmaku"></div>
+	<!-- 遮挡布面 -->
+	<div id="occlusion"></div>
 
 	<!-- main -->
 	<div class="myvideo-content">
@@ -35,7 +37,7 @@
 	            </video>
 	            <div class="container-bottom">
 	                <div class="video-bottom-left">梦想+∞</div>
-	                <input type="text" placeholder=" 此处填充弹幕..." />
+	                <input id="bullet-input" type="text" placeholder=" 此处填充弹幕..." />
 	                <input type="button" value="发射!">
 	            </div>
 	        </div>
@@ -53,14 +55,64 @@
 	            <div class="right-bottom">
 	                <div class="right-bottom-top">
 	                    <ul>
-	                        <li id="video-time">时间</li>
+	                        <li id="video-time">编号</li>
 	                        <li id="comment">评论</li>
 	                        <li id="send-time">发送时间</li>
 	                    </ul>
 	                </div>
 	                <div class="right-bottom-list">
 	                    <table class="danmaku-table">
-	                        
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">1</td>
+	                       	<td class="danmaku-comment">hhh</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">2</td>
+	                       	<td class="danmaku-comment">233</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">3</td>
+	                       	<td class="danmaku-comment">yes</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">4</td>
+	                       	<td class="danmaku-comment">nice</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">5</td>
+	                       	<td class="danmaku-comment">ok~</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">6</td>
+	                       	<td class="danmaku-comment">666</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">7</td>
+	                       	<td class="danmaku-comment">bye~</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">8</td>
+	                       	<td class="danmaku-comment">thanks</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">9</td>
+	                       	<td class="danmaku-comment">woooo</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+	                      <tr class="danmaku-line">
+	                       	<td class="danmaku-num">10</td>
+	                       	<td class="danmaku-comment">yooooo~</td>
+	                       	<td class="danmaku-time">2015-02-25 20:28:07</td>
+	                      </tr>
+
 	                    </table>
 	                </div>
 	            </div>
@@ -80,7 +132,7 @@
 		<!-- 评论区 -->
 		<div>
 			<p>说两句呗~o(*￣▽￣*)ブ</p>
-			<form class="say-form">
+			<form class="say-form" action="<{spUrl c=comment a=add}>" method="GET">
 				<textarea class="form-control" rows="4" name="message"></textarea>
 				<button type="submit" class="btn btn-primary"> 发表评论 </button>
 			</form>
@@ -93,9 +145,9 @@
 	   			<span class="badge badge-info"><{$comment[bfc].reply_id}></span>
 	    		<a href=""><{$comment[bfc].replyer}></a>
 	    		<span class="time"><{$comment[bfc].addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
-	    		<span><a class="btn-quote">[回复]</a></span>
+	    		<span><a class="btn-quote" href="<{spUrl c=comment a=add}>">[回复]</a></span>
 		    	<div class="comment-content">
-		    		<p><{$comment[bfc].contents}><p>
+		    		<p><{$comment[bfc].message}><p>
 		    	</div>
 		    	<{/section}>
 		  	</div>
